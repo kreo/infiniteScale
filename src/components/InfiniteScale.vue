@@ -350,11 +350,11 @@ $fh-component-selectors: '[class*="Cmp"], [fh-component], .fh-component';
     ctx: '', 
     size: 1, 
     unit: rem, 
-    key: 'md'
+    step: 'md'
   ), $params);
 
   $ctx: map-get($options, ctx);
-  $step: map-get($options, key);
+  $step: map-get($options, step);
   $size: map-get($options, size);
 
   #{$ctx}[fh-scale='#{$step}'],
@@ -381,7 +381,7 @@ $fh-component-selectors: '[class*="Cmp"], [fh-component], .fh-component';
       ctx: $ctx, 
       unit: $unit,
       size: map-get($fh-scale-steps, $key),  
-      key: $key
+      step: $key
     );
 
     @include scale-handler($options);
@@ -394,7 +394,7 @@ $fh-component-selectors: '[class*="Cmp"], [fh-component], .fh-component';
       ctx: $ctx, 
       unit: $unit,
       size: $fh-scale-factor * $idx,  
-      key: $idx
+      step: $idx
     );
     @include scale-handler($options);
   }
