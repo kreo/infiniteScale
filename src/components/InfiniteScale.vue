@@ -344,38 +344,59 @@ $fh-scale-steps: (
 
 $fh-component-selectors: '[class*="Cmp"], [fh-component], .fh-component'; 
 
-@mixin scale-exceptions($ctx, $size, $key) {
-  #{$ctx}[fh-scale-root='#{$key}'] {
+@mixin scale-handler($params) {
+
+  $options: map-merge((
+    ctx: '', 
+    size: 1, 
+    unit: rem, 
+    key: 'md'
+  ), $params);
+
+  $ctx: map-get($options, ctx);
+  $step: map-get($options, key);
+  $size: map-get($options, size);
+
+  #{$ctx}[fh-scale='#{$step}'],
+  #{$ctx}.fh-scale--#{$step} {
+    font-size: $size + map-get($options, unit);
+  }
+
+  #{$ctx}[fh-scale-root='#{$step}'],
+  #{$ctx}.fh-scale-root--#{$step} {
     font-size: $size + rem;
   }
 
-  #{$ctx}[fh-scale-relative='#{$key}'] {
+  #{$ctx}[fh-scale-inherit='#{$step}'],
+  #{$ctx}.fh-scale-inherit--#{$step} {
     font-size: $size + em;
   }
 }
 
 @mixin scale-steps($ctx, $unit) {
-  @each $level in $fh-scale-steps {
-    $idx: index($fh-scale-steps, $level);
+  @each $step in $fh-scale-steps {
+    $idx: index($fh-scale-steps, $step);
     $key: nth(map-keys($fh-scale-steps), $idx);
-    $size: map-get($fh-scale-steps, $key);
+    $options: (
+      ctx: $ctx, 
+      unit: $unit,
+      size: map-get($fh-scale-steps, $key),  
+      key: $key
+    );
 
-    #{$ctx}[fh-scale='#{$key}'] {
-      font-size: $size + $unit;
-    }
-
-    @include scale-exceptions($ctx, $size, $key);
+    @include scale-handler($options);
   }
 }
 
 @mixin scale-levels($ctx, $unit) {
   @for $idx from 1 through $fh-scale-levels {
-    $size: $fh-scale-factor * $idx;
-    #{$ctx}[fh-scale='#{$idx}'] {
-      font-size: $size + $unit;
-    }
-
-    @include scale-exceptions($ctx, $size, $idx);
+    $options: (
+      ctx: $ctx, 
+      unit: $unit,
+      size: $fh-scale-factor * $idx,  
+      key: $idx
+    );
+    @include scale-handler($options);
   }
 }
 
