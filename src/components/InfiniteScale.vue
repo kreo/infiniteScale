@@ -342,6 +342,7 @@ $fh-scale-steps: (
   xxl: 2.0
 ) !default;
 
+$fh-component-selectors: '[class*="Cmp"], [fh-component], .fh-component'; 
 
 @mixin scale-exceptions($ctx, $size, $key) {
   #{$ctx}[fh-scale-root='#{$key}'] {
@@ -387,9 +388,7 @@ $fh-scale-steps: (
 .InfiniteScale {
   @include fh-scale(child, em);
 
-  [class*="Cmp"],
-  [fh-component],
-  .fh-component {
+  #{$fh-component-selectors} {
     @include fh-scale(self, rem);
 
     & & {
