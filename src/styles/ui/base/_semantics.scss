@@ -66,5 +66,5 @@ section {
 
 button,
 input[type=button] {
-  @include Button();
+  @extend %Button;
 }

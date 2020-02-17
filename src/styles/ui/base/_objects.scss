@@ -24,9 +24,5 @@
 }
 
 .button {
-  @include Button();
-}
-
-.box {
-  padding: 1rem;
+  @extend %Button;
 }

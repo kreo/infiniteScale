@@ -1,24 +1,22 @@
 <template>
-  <div id="app">
+  <div id="app-root">
     <InfiniteScale/>
   </div>
 </template>
 
 <script>
-import Skel from "./components/Skel";
 import InfiniteScale from "./components/InfiniteScale";
 
 export default {
   name: "App",
   components: {
-    Skel,
     InfiniteScale
   }
 };
 </script>
 
 <style lang="scss" scoped>
-#app {
+#app-root {
   padding: 1rem;
 }
 </style>

@@ -13,311 +13,309 @@
       </g>
     </svg>
 
-    <div class="typo">
-      <div class="content">
-        <section fh-scale="xxs">
-          <pre fh-scale-root="md" fh-highlight fh-text="center">[XXS]</pre>
-          <h6>Infinte Scale</h6>
-          <h5>Infinte Scale</h5>
-          <h4>Infinte Scale</h4>
-          <h3>Infinte Scale</h3>
-          <h2>Infinte Scale</h2>
-          <h1>Infinte Scale</h1>
+    <div class="content">
+      <section fh-scale="xxs">
+        <pre fh-scale-root="md" fh-highlight fh-text="center">[XXS]</pre>
+        <h6>Infinte Scale</h6>
+        <h5>Infinte Scale</h5>
+        <h4>Infinte Scale</h4>
+        <h3>Infinte Scale</h3>
+        <h2>Infinte Scale</h2>
+        <h1>Infinte Scale</h1>
 
-          <p>
-            <span
-              class="text"
-            >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
-          </p>
-        </section>
+        <p>
+          <span
+            class="text"
+          >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
+        </p>
+      </section>
 
-        <section fh-scale="xs">
-          <pre fh-scale-root="md" fh-highlight fh-text="center">[XS]</pre>
-          <h6>Infinte Scale</h6>
-          <h5>Infinte Scale</h5>
-          <h4>Infinte Scale</h4>
-          <h3>Infinte Scale</h3>
-          <h2>Infinte Scale</h2>
-          <h1>Infinte Scale</h1>
+      <section fh-scale="xs">
+        <pre fh-scale-root="md" fh-highlight fh-text="center">[XS]</pre>
+        <h6>Infinte Scale</h6>
+        <h5>Infinte Scale</h5>
+        <h4>Infinte Scale</h4>
+        <h3>Infinte Scale</h3>
+        <h2>Infinte Scale</h2>
+        <h1>Infinte Scale</h1>
 
-          <p>
-            <span
-              class="text"
-            >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
-          </p>
-        </section>
+        <p>
+          <span
+            class="text"
+          >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
+        </p>
+      </section>
 
-        <section fh-scale="sm">
-          <pre fh-scale-root="md" fh-highlight fh-text="center">[SM]</pre>
-          <h6>Infinte Scale</h6>
-          <h5>Infinte Scale</h5>
-          <h4>Infinte Scale</h4>
-          <h3>Infinte Scale</h3>
-          <h2>Infinte Scale</h2>
-          <h1>Infinte Scale</h1>
+      <section fh-scale="sm">
+        <pre fh-scale-root="md" fh-highlight fh-text="center">[SM]</pre>
+        <h6>Infinte Scale</h6>
+        <h5>Infinte Scale</h5>
+        <h4>Infinte Scale</h4>
+        <h3>Infinte Scale</h3>
+        <h2>Infinte Scale</h2>
+        <h1>Infinte Scale</h1>
 
-          <p>
-            <span
-              class="text"
-            >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
-          </p>
-        </section>
+        <p>
+          <span
+            class="text"
+          >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
+        </p>
+      </section>
 
-        <section fh-scale="md">
-          <pre fh-scale-root="md" fh-highlight fh-text="center">[MD]</pre>
-          <h6>Infinte Scale</h6>
-          <h5>Infinte Scale</h5>
-          <h4>Infinte Scale</h4>
-          <h3>Infinte Scale</h3>
-          <h2>Infinte Scale</h2>
-          <h1>Infinte Scale</h1>
+      <section fh-scale="md">
+        <pre fh-scale-root="md" fh-highlight fh-text="center">[MD]</pre>
+        <h6>Infinte Scale</h6>
+        <h5>Infinte Scale</h5>
+        <h4>Infinte Scale</h4>
+        <h3>Infinte Scale</h3>
+        <h2>Infinte Scale</h2>
+        <h1>Infinte Scale</h1>
 
-          <p>
-            <span
-              class="text"
-            >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
-          </p>
-        </section>
+        <p>
+          <span
+            class="text"
+          >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
+        </p>
+      </section>
 
-        <section fh-scale="lg">
-          <pre fh-scale-root="md" fh-highlight fh-text="center">[LG]</pre>
-          <h6>Infinte Scale</h6>
-          <h5>Infinte Scale</h5>
-          <h4>Infinte Scale</h4>
-          <h3>Infinte Scale</h3>
-          <h2>Infinte Scale</h2>
-          <h1>Infinte Scale</h1>
+      <section fh-scale="lg">
+        <pre fh-scale-root="md" fh-highlight fh-text="center">[LG]</pre>
+        <h6>Infinte Scale</h6>
+        <h5>Infinte Scale</h5>
+        <h4>Infinte Scale</h4>
+        <h3>Infinte Scale</h3>
+        <h2>Infinte Scale</h2>
+        <h1>Infinte Scale</h1>
 
-          <p>
-            <span
-              class="text"
-            >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
-          </p>
-        </section>
+        <p>
+          <span
+            class="text"
+          >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
+        </p>
+      </section>
 
-        <section fh-scale="xl">
-          <pre fh-scale-root="md" fh-highlight fh-text="center">[XL]</pre>
-          <h6>Infinte Scale</h6>
-          <h5>Infinte Scale</h5>
-          <h4>Infinte Scale</h4>
-          <h3>Infinte Scale</h3>
-          <h2>Infinte Scale</h2>
-          <h1>Infinte Scale</h1>
+      <section fh-scale="xl">
+        <pre fh-scale-root="md" fh-highlight fh-text="center">[XL]</pre>
+        <h6>Infinte Scale</h6>
+        <h5>Infinte Scale</h5>
+        <h4>Infinte Scale</h4>
+        <h3>Infinte Scale</h3>
+        <h2>Infinte Scale</h2>
+        <h1>Infinte Scale</h1>
 
-          <p>
-            <span
-              class="text"
-            >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
-          </p>
-        </section>
+        <p>
+          <span
+            class="text"
+          >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
+        </p>
+      </section>
 
-        <section fh-scale="xxl">
-          <pre fh-scale-root="md" fh-highlight fh-text="center">[XXL]</pre>
-          <h6>Infinte Scale</h6>
-          <h5>Infinte Scale</h5>
-          <h4>Infinte Scale</h4>
-          <h3>Infinte Scale</h3>
-          <h2>Infinte Scale</h2>
-          <h1>Infinte Scale</h1>
+      <section fh-scale="xxl">
+        <pre fh-scale-root="md" fh-highlight fh-text="center">[XXL]</pre>
+        <h6>Infinte Scale</h6>
+        <h5>Infinte Scale</h5>
+        <h4>Infinte Scale</h4>
+        <h3>Infinte Scale</h3>
+        <h2>Infinte Scale</h2>
+        <h1>Infinte Scale</h1>
 
-          <p>
-            <span
-              class="text"
-            >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
-          </p>
-        </section>
+        <p>
+          <span
+            class="text"
+          >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
+        </p>
+      </section>
 
-        <section fh-scale="xxxl">
-          <pre fh-scale-root="md" fh-highlight fh-text="center">[XXXL]</pre>
-          <h6>Infinte Scale</h6>
-          <h5>Infinte Scale</h5>
-          <h4>Infinte Scale</h4>
-          <h3>Infinte Scale</h3>
-          <h2>Infinte Scale</h2>
-          <h1>Infinte Scale</h1>
+      <section fh-scale="xxxl">
+        <pre fh-scale-root="md" fh-highlight fh-text="center">[XXXL]</pre>
+        <h6>Infinte Scale</h6>
+        <h5>Infinte Scale</h5>
+        <h4>Infinte Scale</h4>
+        <h3>Infinte Scale</h3>
+        <h2>Infinte Scale</h2>
+        <h1>Infinte Scale</h1>
 
-          <p>
-            <span
-              class="text"
-            >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
-          </p>
-        </section>
+        <p>
+          <span
+            class="text"
+          >When you are satisfied with your changes, check Lock to let the Constraint to control this GameObject. This property has no effect in Play Mode.</span>
+        </p>
+      </section>
+    </div>
+
+    <div class="content">
+      <section>
+        <div class="buttonCmp" fh-scale="xxs">
+          <button class="button">
+            <span class="text">Button</span>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <div class="buttonCmp" fh-scale="xs">
+          <button class="button">
+            <span class="icon">
+              <svg width="100%" height="100%" viewBox="0 0 16 17">
+                <use xlink:href="#icon-cog"></use>
+              </svg>
+            </span>
+            
+            <span class="text">Button</span>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <div class="buttonCmp" fh-scale="sm">
+          <button class="button">
+            <span class="icon">
+              <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 38 38"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
+                    <stop stop-color="var(--skin-color-default-fg)" stop-opacity="0" offset="0%"></stop>
+                    <stop
+                      stop-color="var(--skin-color-default-fg)"
+                      stop-opacity=".631"
+                      offset="63.146%"
+                    ></stop>
+                    <stop stop-color="var(--skin-color-default-fg)" offset="100%"></stop>
+                  </linearGradient>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <g transform="translate(1 1)">
+                    <path
+                      d="M36 18c0-9.94-8.06-18-18-18"
+                      id="Oval-2"
+                      stroke="url(#a)"
+                      stroke-width="2"
+                    >
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite"
+                      ></animateTransform>
+                    </path>
+                    <circle fill="var(--skin-color-default-fg)" cx="36" cy="18" r="1">
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite"
+                      ></animateTransform>
+                    </circle>
+                  </g>
+                </g>
+              </svg>
+            </span>
+            <span class="text" fh-content="Button"></span>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <div class="buttonCmp" fh-scale="md">
+          <button class="button">
+            <span class="text">Button</span>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <div class="buttonCmp" fh-scale="lg">
+          <button class="button">
+            <span class="text">Button</span>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <div class="buttonCmp" fh-scale="xl">
+          <button class="button">
+            <span class="text">Button</span>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <div class="buttonCmp" fh-scale="xxl">
+          <button class="button">
+            <span class="text">Button</span>
+          </button>
+        </div>
+      </section>
+
+      <hr>
+
+      <section>
+        <div class="buttonCmp">
+          <button fh-scale="xxs">
+            <span class="text">Button</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="buttonCmp">
+        <button fh-scale="xs">
+          <span class="text">Button</span>
+        </button>
       </div>
 
-      <div class="content">
-        <section>
-          <div class="buttonCmp" fh-scale="xxs">
-            <button class="button">
-              <span class="text">Button</span>
-            </button>
-          </div>
-        </section>
+      <br>
 
-        <section>
-          <div class="buttonCmp" fh-scale="xs">
-            <button class="button">
-              <span class="icon">
-                <svg width="100%" height="100%" viewBox="0 0 16 17">
-                  <use xlink:href="#icon-cog"></use>
-                </svg>
-              </span>
-              
-              <span class="text">Button</span>
-            </button>
-          </div>
-        </section>
+      <div class="buttonCmp">
+        <button fh-scale="sm">
+          <span class="text" pxtoem>Button</span>
+        </button>
+      </div>
 
-        <section>
-          <div class="buttonCmp" fh-scale="sm">
-            <button class="button">
-              <span class="icon">
-                <svg
-                  width="100%"
-                  height="100%"
-                  viewBox="0 0 38 38"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
-                      <stop stop-color="var(--skin-color-default-fg)" stop-opacity="0" offset="0%"></stop>
-                      <stop
-                        stop-color="var(--skin-color-default-fg)"
-                        stop-opacity=".631"
-                        offset="63.146%"
-                      ></stop>
-                      <stop stop-color="var(--skin-color-default-fg)" offset="100%"></stop>
-                    </linearGradient>
-                  </defs>
-                  <g fill="none" fill-rule="evenodd">
-                    <g transform="translate(1 1)">
-                      <path
-                        d="M36 18c0-9.94-8.06-18-18-18"
-                        id="Oval-2"
-                        stroke="url(#a)"
-                        stroke-width="2"
-                      >
-                        <animateTransform
-                          attributeName="transform"
-                          type="rotate"
-                          from="0 18 18"
-                          to="360 18 18"
-                          dur="0.9s"
-                          repeatCount="indefinite"
-                        ></animateTransform>
-                      </path>
-                      <circle fill="var(--skin-color-default-fg)" cx="36" cy="18" r="1">
-                        <animateTransform
-                          attributeName="transform"
-                          type="rotate"
-                          from="0 18 18"
-                          to="360 18 18"
-                          dur="0.9s"
-                          repeatCount="indefinite"
-                        ></animateTransform>
-                      </circle>
-                    </g>
-                  </g>
-                </svg>
-              </span>
-              <span class="text" fh-content="Button"></span>
-            </button>
-          </div>
-        </section>
+      <br>
 
-        <section>
-          <div class="buttonCmp" fh-scale="md">
-            <button class="button">
-              <span class="text">Button</span>
-            </button>
-          </div>
-        </section>
-
-        <section>
-          <div class="buttonCmp" fh-scale="lg">
-            <button class="button">
-              <span class="text">Button</span>
-            </button>
-          </div>
-        </section>
-
-        <section>
-          <div class="buttonCmp" fh-scale="xl">
-            <button class="button">
-              <span class="text">Button</span>
-            </button>
-          </div>
-        </section>
-
-        <section>
-          <div class="buttonCmp" fh-scale="xxl">
-            <button class="button">
-              <span class="text">Button</span>
-            </button>
-          </div>
-        </section>
-
-        <hr>
-
-        <section>
-          <div class="buttonCmp">
-            <button fh-scale="xxs">
-              <span class="text">Button</span>
-            </button>
-          </div>
-        </section>
-
-        <div class="buttonCmp">
-          <button fh-scale="xs">
-            <span class="text">Button</span>
-          </button>
-        </div>
-
-        <br>
-
-        <div class="buttonCmp">
-          <button fh-scale="sm">
-            <span class="text" pxtoem>Button</span>
-          </button>
-        </div>
-
-        <br>
-
-        <div
-          fh-scale="lg"
-          class="buttonCmp"
-          style="background: hsla(261, 69%, 45%, 0.24);display: flex;justify-content: space-between;padding: 0.5em;"
-        >
-          <div style="text-align:right;background: #420c7121;margin: 0 0 auto auto;width: 100%;">
-            <button fh-scale style="
+      <div
+        fh-scale="lg"
+        class="buttonCmp"
+        style="background: hsla(261, 69%, 45%, 0.24);display: flex;justify-content: space-between;padding: 0.5em;"
+      >
+        <div style="text-align:right;background: #420c7121;margin: 0 0 auto auto;width: 100%;">
+          <button fh-scale style="
  margin: auto;font-size: 1em;">
-              <span class="text">Button</span>
-            </button>
-          </div>
-        </div>
-
-        <br>
-
-        <div class="buttonCmp">
-          <button fh-scale="lg">
             <span class="text">Button</span>
           </button>
         </div>
+      </div>
 
-        <br>
+      <br>
 
-        <div class="buttonCmp">
-          <button fh-scale="xl">
-            <span class="text">Button</span>
-          </button>
-        </div>
+      <div class="buttonCmp">
+        <button fh-scale="lg">
+          <span class="text">Button</span>
+        </button>
+      </div>
 
-        <br>
+      <br>
 
-        <div class="buttonCmp">
-          <button fh-scale="xxl">
-            <span class="text">Button</span>
-          </button>
-        </div>
+      <div class="buttonCmp">
+        <button fh-scale="xl">
+          <span class="text">Button</span>
+        </button>
+      </div>
+
+      <br>
+
+      <div class="buttonCmp">
+        <button fh-scale="xxl">
+          <span class="text">Button</span>
+        </button>
       </div>
     </div>
   </div>
@@ -325,17 +323,24 @@
 
 <script>
 export default {
-  name: "InfiniteScale",
-  props: {
-    msg: String
-  }
+  name: "InfiniteScale"
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../styles/core/index";
 
-.buttonCmp {
-  background: red;
+.InfiniteScale {
+  @include fh-scale(child, em);
+
+  [class*="Cmp"],
+  [fh-component],
+  .fh-component {
+    @include fh-scale(self, rem);
+
+    & & {
+      @include fh-scale(self, em);
+    }
+  }
 }
 </style>
