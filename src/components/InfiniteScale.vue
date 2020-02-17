@@ -330,6 +330,60 @@ export default {
 <style lang="scss" scoped>
 @import "../styles/core/index";
 
+$fh-scale-factor: 0.05 !default;
+$fh-scale-levels: 64 !default;
+$fh-scale-steps: (
+  xxs: 0.5,
+  xs: 0.75,
+  sm: 1.0,
+  md: 1.25,
+  lg: 1.5,
+  xl: 1.75,
+  xxl: 2.0
+) !default;
+
+
+@mixin scale-exceptions($ctx, $size, $key) {
+  #{$ctx}[fh-scale-root='#{$key}'] {
+    font-size: $size + rem;
+  }
+
+  #{$ctx}[fh-scale-relative='#{$key}'] {
+    font-size: $size + em;
+  }
+}
+
+@mixin scale-steps($ctx, $unit) {
+  @each $level in $fh-scale-steps {
+    $idx: index($fh-scale-steps, $level);
+    $key: nth(map-keys($fh-scale-steps), $idx);
+    $size: map-get($fh-scale-steps, $key);
+
+    #{$ctx}[fh-scale='#{$key}'] {
+      font-size: $size + $unit;
+    }
+
+    @include scale-exceptions($ctx, $size, $key);
+  }
+}
+
+@mixin scale-levels($ctx, $unit) {
+  @for $idx from 1 through $fh-scale-levels {
+    $size: $fh-scale-factor * $idx;
+    #{$ctx}[fh-scale='#{$idx}'] {
+      font-size: $size + $unit;
+    }
+
+    @include scale-exceptions($ctx, $size, $idx);
+  }
+}
+
+@mixin fh-scale($target: self, $unit: em) {
+  $ctx: if($target == self, '&', '');
+  @include scale-levels($ctx, $unit);
+  @include scale-steps($ctx, $unit);
+}
+
 .InfiniteScale {
   @include fh-scale(child, em);
 
