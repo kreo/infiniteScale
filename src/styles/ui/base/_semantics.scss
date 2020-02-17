@@ -1,0 +1,70 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 0.75em;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+h6 {
+  font-size: 0.67em;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+pre {
+  display: inline-flex;
+  margin-top: 1em;
+  margin-bottom: 1.25em;
+  padding: 0.2em 0.5em;
+}
+
+hr {
+  margin: 1.25em auto;
+  border: 1px solid rgba(white, 0.25);
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+}
+
+svg {
+  fill: currentColor;
+}
+
+section {
+  display: block;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+button,
+input[type=button] {
+  @include Button();
+}

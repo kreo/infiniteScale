@@ -1,0 +1,9 @@
+@include fh-scale(child, em);
+
+[class*='Cmp'] {
+  @include fh-scale(self, rem);
+
+  & & {
+    @include fh-scale(self, em);
+  }
+}

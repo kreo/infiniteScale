@@ -1,0 +1,32 @@
+.text,
+.button,
+.icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.text,
+.button {
+  font-size: 1em;
+}
+
+.icon {
+  width: 1em;
+}
+
+.icon,
+.text {
+  color: inherit;
+}
+
+.icon + .text {
+  margin-left: 0.5em;
+}
+
+.button {
+  @include Button();
+}
+
+.box {
+  padding: 1rem;
+}

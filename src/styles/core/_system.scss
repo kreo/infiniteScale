@@ -1,0 +1,7 @@
+@function pxtopercent($target, $parent: 16) {
+  @return percentage($target / $parent);
+}
+
+@function pxtoem($target, $context: 16) {
+  @return ($target / $context) + 0em;
+}

@@ -1,0 +1,17 @@
+[fh-content] {
+  &::before {
+    content: attr(fh-content);
+  }
+}
+
+[fh-text=left] {
+  text-align: left;
+}
+
+[fh-text=center] {
+  text-align: center;
+}
+
+[fh-text=right] {
+  text-align: right;
+}
