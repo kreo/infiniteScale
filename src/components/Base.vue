@@ -23,15 +23,5 @@ export default {
     scalable: VueTypes.bool.def(true),
     size: VueTypes.string
   }
-  /*
-  computed: {
-    classes() {
-      return {
-        [this.scalableClasses]: this.scalable,
-        [this.sizeClasses]: this.size
-      };
-    }
-  }
-  */
 };
 </script>

@@ -2,9 +2,7 @@
   <Base :tagName="tagName" :class="['c-button', classes]">
     <div class="inner">
       <span v-if="hasIconBefore" class="icon">
-        <svg width="100%" height="100%" viewBox="0 0 16 17">
-          <use xlink:href="#icon-cog"></use>
-        </svg>
+        <Icon tagName="i" size="md"/>
       </span>
       
       <span v-if="hasText" class="text">{{ text }}</span>
@@ -16,21 +14,19 @@
       </span>
     </div>
   </Base>
-
-  <!--
-  <div :tagName="tagName" class="Button" :class="[classes]">
-    <slot>{{text}}</slot>
-  </div>
-  -->
 </template>
 
 <script>
 import VueTypes from "vue-types";
 import Base from "./Base";
+import Icon from "./Icon";
 
 export default {
   name: "Button",
   extends: Base,
+  components: {
+    Icon
+  },
   data() {
     return {};
   },
