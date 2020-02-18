@@ -1,3 +1,7 @@
+&:focus {
+  outline: none;
+}
+
 ::selection,
 [fh-highlight] {
   color: white;
