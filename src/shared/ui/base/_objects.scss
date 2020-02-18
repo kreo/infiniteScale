@@ -1,6 +1,7 @@
 .text,
 .button,
-.icon {
+.icon,
+.inner {
   display: inline-flex;
   align-items: center;
 }
@@ -20,6 +21,10 @@
 }
 
 .icon + .text {
+  margin-left: 0.5em;
+}
+
+.text + .icon {
   margin-left: 0.5em;
 }
 

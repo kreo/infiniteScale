@@ -145,6 +145,10 @@
 
     <div class="content">
       <section>
+        <Button size="xl" text="Button inherit from Base"/>
+      </section>
+
+      <section>
         <div class="buttonCmp" fh-scale="xxs">
           <button class="button">
             <span class="text">Button</span>
@@ -326,13 +330,15 @@ import Button from "./Button";
 
 export default {
   name: "InfiniteScale",
-  components: {}
+  components: {
+    Button
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/core/index";
-
+@import "../shared/core/index";
+$fh-component: '[class*=c-]'; 
 $fh-scale-factor: 0.05 !default;
 $fh-scale-levels: 64 !default;
 $fh-scale-steps: (
@@ -344,8 +350,6 @@ $fh-scale-steps: (
   xl: 1.75,
   xxl: 2.0
 ) !default;
-
-$fh-component: '[class*="Cmp"], [fh-component], .fh-component'; 
 
 @mixin scale-handler($params) {
 
@@ -413,13 +417,14 @@ $fh-component: '[class*="Cmp"], [fh-component], .fh-component';
 @include fh-scale(child, em);
 
 #{$fh-component} {
+  
   font-size: 1rem;
   @include fh-scale(self, rem);
 
-  & & {
+  &.is-scalable {
     font-size: 1em;
-    @include fh-scale(self, em);
-  }
+    @include fh-scale(self, rem);
+  }  
 }
 
 </style>
