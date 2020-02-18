@@ -322,8 +322,11 @@
 </template>
 
 <script>
+import Button from "./Button";
+
 export default {
-  name: "InfiniteScale"
+  name: "InfiniteScale",
+  components: {}
 };
 </script>
 

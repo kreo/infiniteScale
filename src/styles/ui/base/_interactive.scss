@@ -1,4 +1,10 @@
-*:focus {
+* {
+  &:focus, &:visited:focus {
+    outline: none;
+  }
+}
+
+[tabindex='-1'] {
   outline: none;
 }
 
