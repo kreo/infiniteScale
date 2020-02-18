@@ -257,7 +257,7 @@
 
       <hr>
 
-      <section>
+      <section class="cardCmp">
         <div class="buttonCmp">
           <button fh-scale="xxs">
             <span class="text">Button</span>
@@ -342,7 +342,7 @@ $fh-scale-steps: (
   xxl: 2.0
 ) !default;
 
-$fh-component-selectors: '[class*="Cmp"], [fh-component], .fh-component'; 
+$fh-component: '[class*="Cmp"], [fh-component], .fh-component'; 
 
 @mixin scale-handler($params) {
 
@@ -406,15 +406,17 @@ $fh-component-selectors: '[class*="Cmp"], [fh-component], .fh-component';
   @include scale-steps($ctx, $unit);
 }
 
-.InfiniteScale {
-  @include fh-scale(child, em);
 
-  #{$fh-component-selectors} {
-    @include fh-scale(self, rem);
+@include fh-scale(child, em);
 
-    & & {
-      @include fh-scale(self, em);
-    }
+#{$fh-component} {
+  font-size: 1rem;
+  @include fh-scale(self, rem);
+
+  & & {
+    font-size: 1em;
+    @include fh-scale(self, em);
   }
 }
+
 </style>
