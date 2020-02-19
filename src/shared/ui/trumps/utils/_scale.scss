@@ -1,12 +1,1 @@
-@include scale(child, em);
-
-#{$component} {
-  font-size: 1rem;
-
-  @include scale(self, rem);
-
-  &.is-scalable {
-    font-size: 1em;
-    @include scale(self, rem);
-  }
-}
+@include scale-generator();

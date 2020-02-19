@@ -1,7 +1,7 @@
 <template>
   <base-cmp
     :tagName="tagName"
-    :class="['text', classes]"
+    :class="[classes]"
   >
     <slot></slot>
   </base-cmp>
@@ -23,7 +23,9 @@
     },
     computed: {
       extraClasses () {
-        return {}
+        return {
+          'text': true
+        }
       },
     }
   }

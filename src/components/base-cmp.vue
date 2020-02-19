@@ -9,9 +9,7 @@ export default {
   render: function(createElement) {
     return createElement(
       this.tagName,
-      {
-        class: this.utilityClasses
-      },
+      { class: this.toolsClasses },
       this.$slots.default
     );
   },
@@ -33,6 +31,7 @@ export default {
   computed: {
     baseClasses () {
       return {
+        [this.$options.name]: true,
         [this.scalableClasses]: this.scalable,
         [this.scaleClasses]: this.scale
       }

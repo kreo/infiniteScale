@@ -1,7 +1,7 @@
 <template>
   <base-cmp
     :tagName="tagName"
-    :class="['card', classes]"
+    :class="[classes]"
   >
 
     <template v-if="hasBefore">
@@ -41,7 +41,9 @@
     },
     computed: {
       extraClasses () {
-        return {}
+        return {
+          'card': true
+        }
       },
       hasBefore () {
         return !!this.$slots['before']

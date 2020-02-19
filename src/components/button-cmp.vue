@@ -2,7 +2,7 @@
   <base-cmp
     :tagName="tagName"
     :role="role"
-    :class="['button', classes]"
+    :class="[classes]"
     :href="link"
     :to="route"
   >
@@ -37,12 +37,14 @@
     props: {
       tagName: VueTypes.string.def('button'),
       hasText: VueTypes.bool.def(true),
-      text: VueTypes.string.def('Button inherit'),
+      text: VueTypes.string,
       role: VueTypes.string.def('button'),
     },
     computed: {
       extraClasses () {
-        return {}
+        return {
+          'button': true
+        }
       },
       link () {
         return this.tagName === 'a' ? this.href : null
