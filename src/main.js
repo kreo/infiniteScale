@@ -4,9 +4,10 @@ import App from "./App.vue";
 import "./shared/main.scss";
 
 // Components
-import BaseCmp from "./components/base-cmp";
+import BaseCmp from "./components/base-cmp"
 
-Vue.component("BaseCmp", BaseCmp);
+Vue.component("BaseCmp", BaseCmp)
+
 Vue.config.productionTip = false;
 
 new Vue({

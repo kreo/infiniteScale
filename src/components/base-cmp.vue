@@ -26,7 +26,10 @@ export default {
     role: VueTypes.string,
     href: VueTypes.string,
     to: VueTypes.object,
-    route: VueTypes.string
+    //route: VueTypes.string
+  },
+  computed: {
+
   }
 };
 </script>

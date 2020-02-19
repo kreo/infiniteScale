@@ -3,7 +3,7 @@
 
     <section>
 
-      <ButtonCmp tagName="a" href="/hello" scale="50">
+      <button-cmp tagName="a" href="/hello" scale="15">
         <template #before>
           <media-cmp>
             <svg width="100%" height="100%" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
@@ -55,6 +55,18 @@
           <text-cmp>Button Inherit</text-cmp>
         </template>
 
+      </button-cmp>
+
+    </section>
+
+    <section>
+
+      <button-cmp tagName="a" href="/hello" scale="20">
+
+        <template #content>
+          <text-cmp>Button Inherit</text-cmp>
+        </template>
+
         <template #after>
           <media-cmp>
             <svg width="100%" height="100%" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
@@ -62,8 +74,70 @@
             </svg>
           </media-cmp>
         </template>
-      </ButtonCmp>
+      </button-cmp>
 
+    </section>
+
+    <section>
+
+
+      <card-cmp>
+        <template #before>
+          ciao
+        </template>
+
+        <template #after>
+          <button-cmp tagName="a" href="/hello" scale="25">
+            <template #before>
+              <media-cmp>
+                <img src="//pbs.twimg.com/profile_images/701940186838532096/TarzXAkb.jpg" alt="">
+              </media-cmp>
+            </template>
+
+            <template #content>
+              <text-cmp>Button Inherit</text-cmp>
+            </template>
+          </button-cmp>
+
+          <card-cmp scale="10">
+            <template #before>
+              <card-cmp scale="10">
+            <template #before>
+              ciao
+            </template>
+
+            <template #after>
+              <button-cmp tagName="a" href="/hello" scale="25">
+                <template #before>
+                  <media-cmp>
+                    <img src="//pbs.twimg.com/profile_images/701940186838532096/TarzXAkb.jpg" alt="">
+                  </media-cmp>
+                </template>
+
+                <template #content>
+                  <text-cmp>Button Inherit</text-cmp>
+                </template>
+              </button-cmp>
+            </template>
+          </card-cmp>
+            </template>
+
+            <template #after>
+              <button-cmp tagName="a" href="/hello" scale="25">
+                <template #before>
+                  <media-cmp>
+                    <img src="//pbs.twimg.com/profile_images/701940186838532096/TarzXAkb.jpg" alt="">
+                  </media-cmp>
+                </template>
+
+                <template #content>
+                  <text-cmp>Button Inherit</text-cmp>
+                </template>
+              </button-cmp>
+            </template>
+          </card-cmp>
+        </template>
+      </card-cmp>
     </section>
 
     <svg
@@ -392,13 +466,15 @@
   import MediaCmp from './media-cmp'
   import TextCmp from './text-cmp'
   import ButtonCmp from './button-cmp'
+  import CardCmp from './card-cmp'
 
   export default {
     name: 'InfiniteScaleCmp',
     components: {
       MediaCmp,
       TextCmp,
-      ButtonCmp
+      ButtonCmp,
+      CardCmp
     }
   }
 </script>

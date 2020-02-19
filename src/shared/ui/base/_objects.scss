@@ -1,9 +1,13 @@
 .text,
 .button,
 .media,
-.inner {
+.card {
   display: inline-flex;
   align-items: center;
+}
+
+.inner {
+  display: flex;
 }
 
 .text,
@@ -30,4 +34,20 @@
 
 .button {
   @extend %Button;
+}
+
+.card {
+  @extend %Card;
+}
+
+.header {
+  @extend %Header;
+}
+
+.content {
+
+}
+
+.footer {
+  @extend %Footer;
 }
