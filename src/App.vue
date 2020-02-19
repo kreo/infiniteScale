@@ -1,16 +1,16 @@
 <template>
   <div id="app-root" role="application">
-    <InfiniteScale />
+    <infinite-scale-cmp />
   </div>
 </template>
 
 <script>
-import InfiniteScale from "./components/InfiniteScale";
+import InfiniteScaleCmp from "./components/infinite-scale-cmp";
 
 export default {
   name: "App",
   components: {
-    InfiniteScale
+    InfiniteScaleCmp
   }
 };
 </script>

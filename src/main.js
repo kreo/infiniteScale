@@ -4,9 +4,9 @@ import App from "./App.vue";
 import "./shared/main.scss";
 
 // Components
-import Skel from "./components/Skel";
+import BaseCmp from "./components/base-cmp";
 
-Vue.component("Skel", Skel);
+Vue.component("BaseCmp", BaseCmp);
 Vue.config.productionTip = false;
 
 new Vue({

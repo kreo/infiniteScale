@@ -3,7 +3,7 @@ import VueTypes from "vue-types";
 //import mixin from "./utils/mixin";
 export default {
   //mixins: [mixin],
-  name: "Skel",
+  name: "BaseCmp",
   render: function(createElement) {
     return createElement(
       this.tagName,
@@ -25,6 +25,7 @@ export default {
     scale: VueTypes.string,
     role: VueTypes.string,
     href: VueTypes.string,
+    to: VueTypes.object,
     route: VueTypes.string
   }
 };
