@@ -1,7 +1,8 @@
 <template>
   <base-cmp
     :tagName="tagName"
-    :class="['card', classes]">
+    :class="['card', classes]"
+  >
 
     <template v-if="hasBefore">
       <header class="header">
@@ -39,11 +40,8 @@
       tagName: VueTypes.string.def('article')
     },
     computed: {
-      classes () {
-        return {
-          [this.scalableClasses]: this.scalable,
-          [this.scaleClasses]: this.scale
-        }
+      extraClasses () {
+        return {}
       },
       hasBefore () {
         return !!this.$slots['before']

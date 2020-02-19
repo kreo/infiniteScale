@@ -1,8 +1,10 @@
 <script>
+
 import VueTypes from "vue-types";
-//import mixin from "./utils/mixin";
+import { styleMx } from '../mixins/style-mx'
+
 export default {
-  //mixins: [mixin],
+  mixins: [ styleMx ],
   name: "BaseCmp",
   render: function(createElement) {
     return createElement(
@@ -29,7 +31,12 @@ export default {
     //route: VueTypes.string
   },
   computed: {
-
+    baseClasses () {
+      return {
+        [this.scalableClasses]: this.scalable,
+        [this.scaleClasses]: this.scale
+      }
+    },
   }
 };
 </script>

@@ -23,6 +23,7 @@
 </template>
 
 <script>
+
   import VueTypes from 'vue-types'
   import BaseCmp from './base-cmp'
 
@@ -40,11 +41,8 @@
       role: VueTypes.string.def('button'),
     },
     computed: {
-      classes () {
-        return {
-          [this.scalableClasses]: this.scalable,
-          [this.scaleClasses]: this.scale
-        }
+      extraClasses () {
+        return {}
       },
       link () {
         return this.tagName === 'a' ? this.href : null

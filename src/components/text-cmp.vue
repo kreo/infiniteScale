@@ -1,5 +1,8 @@
 <template>
-  <base-cmp :tagName="tagName" :class="['text', classes]">
+  <base-cmp
+    :tagName="tagName"
+    :class="['text', classes]"
+  >
     <slot></slot>
   </base-cmp>
 </template>
@@ -19,12 +22,9 @@
       tagName: VueTypes.string.def('span')
     },
     computed: {
-      classes () {
-        return {
-          [this.scalableClasses]: this.scalable,
-          [this.scaleClasses]: this.scale
-        }
-      }
+      extraClasses () {
+        return {}
+      },
     }
   }
 </script>
