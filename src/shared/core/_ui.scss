@@ -2,6 +2,7 @@
   display: flex;
   width: 100%;
   height: auto;
+  align-items: center;
 }
 
 %Header,
@@ -10,12 +11,26 @@
 }
 
 %Button {
+  font-size: 1em;
   appearance: none;
+  height: fit-content;
   line-height: 1.25;
   margin: 0 auto;
   padding: 0.33em 0.75em;
   border-radius: 0.33em;
+  font-family: inherit;
   font-style: normal;
+  font-weight: 400;
+  text-rendering: auto;
+  letter-spacing: normal;
+  text-transform: none;
+  text-indent: 0;
+  text-shadow: none;
+  text-align: center;
+  word-spacing: normal;
+  display: inline-flex;
+  align-items: flex-start;
+  cursor: default;
   color: $fh-skin-color-default-fg;
   background-color: $fh-skin-color-default-bg;
   border: 1px solid $fh-skin-color-default-bg;
@@ -23,6 +38,14 @@
     0 4px 4px rgba($fh-skin-color-default-fg, 0.06),
     0 8px 8px rgba($fh-skin-color-default-fg, 0.04),
     0 16px 16px rgba($fh-skin-color-default-fg, 0.02);
+
+  .media + .text {
+    margin-left: 0.5em;
+  }
+
+  .text + .media {
+    margin-left: 0.5em;
+  }
 }
 
 %Card {
@@ -40,4 +63,14 @@
   .footer {
     padding: 1em;
   }
+}
+
+%Media {
+  width: 1em;
+  color: inherit;
+}
+
+%Text {
+  font-size: 1em;
+  color: inherit;
 }

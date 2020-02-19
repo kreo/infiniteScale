@@ -68,3 +68,9 @@ button,
 input[type=button] {
   @extend %Button;
 }
+
+a,
+button,
+input[type=text] {
+  font-weight: normal;
+}

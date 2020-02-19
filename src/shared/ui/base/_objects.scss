@@ -10,26 +10,12 @@
   display: flex;
 }
 
-.text,
-.button {
-  font-size: 1em;
+.text {
+  @extend %Text;
 }
 
 .media {
-  width: 1em;
-}
-
-.media,
-.text {
-  color: inherit;
-}
-
-.media + .text {
-  margin-left: 0.5em;
-}
-
-.text + .media {
-  margin-left: 0.5em;
+  @extend %Media;
 }
 
 .button {
