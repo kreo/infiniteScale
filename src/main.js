@@ -4,9 +4,9 @@ import App from "./App.vue";
 import "./shared/main.scss";
 
 // Components
-import Base from "./components/Base";
+import Skel from "./components/Skel";
 
-Vue.component("Base", Base);
+Vue.component("Skel", Skel);
 Vue.config.productionTip = false;
 
 new Vue({

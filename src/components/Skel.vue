@@ -3,6 +3,7 @@ import VueTypes from "vue-types";
 //import mixin from "./utils/mixin";
 export default {
   //mixins: [mixin],
+  name: "Skel",
   render: function(createElement) {
     return createElement(
       this.tagName,
@@ -21,7 +22,9 @@ export default {
   props: {
     tagName: VueTypes.string.def("div"),
     scalable: VueTypes.bool.def(true),
-    size: VueTypes.string
+    size: VueTypes.string,
+    role: VueTypes.string,
+    link: VueTypes.string
   }
 };
 </script>

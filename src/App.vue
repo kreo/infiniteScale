@@ -1,6 +1,6 @@
 <template>
-  <div id="app-root">
-    <InfiniteScale/>
+  <div id="app-root" role="application">
+    <InfiniteScale />
   </div>
 </template>
 

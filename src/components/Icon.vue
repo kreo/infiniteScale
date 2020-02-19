@@ -1,20 +1,20 @@
 <template>
-  <Base :tagName="tagName" :class="['c-icon', classes]">
+  <Skel :tagName="tagName" :class="['c-icon', classes]">
     <div class="inner">
       <svg width="100%" height="100%" viewBox="0 0 16 17">
         <use xlink:href="#icon-cog"></use>
       </svg>
     </div>
-  </Base>
+  </Skel>
 </template>
 
 <script>
 import VueTypes from "vue-types";
-import Base from "./Base";
+import Skel from "./Skel";
 
 export default {
   name: "Icon",
-  extends: Base,
+  extends: Skel,
   components: {},
   data() {
     return {};
