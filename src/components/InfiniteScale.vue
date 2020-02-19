@@ -1,5 +1,10 @@
 <template>
   <div class="InfiniteScale">
+
+    <section>
+      <Button tagName="a" href="/test" scale="xl" text="Button inherit from Base"/>
+    </section>
+
     <svg
       style="display: none;"
       version="1.1"
@@ -14,8 +19,8 @@
     </svg>
 
     <div class="content">
-      <section fh-scale="xxs">
-        <pre fh-scale-root="md" fh-highlight fh-text="center">[XXS]</pre>
+      <section scale="xxs">
+        <pre scale-root="md" fh-highlight fh-text="center">[XXS]</pre>
         <h6>Infinte Scale</h6>
         <h5>Infinte Scale</h5>
         <h4>Infinte Scale</h4>
@@ -30,8 +35,8 @@
         </p>
       </section>
 
-      <section fh-scale="xs">
-        <pre fh-scale-root="md" fh-highlight fh-text="center">[XS]</pre>
+      <section scale="xs">
+        <pre scale-root="md" fh-highlight fh-text="center">[XS]</pre>
         <h6>Infinte Scale</h6>
         <h5>Infinte Scale</h5>
         <h4>Infinte Scale</h4>
@@ -46,8 +51,8 @@
         </p>
       </section>
 
-      <section fh-scale="sm">
-        <pre fh-scale-root="md" fh-highlight fh-text="center">[SM]</pre>
+      <section scale="sm">
+        <pre scale-root="md" fh-highlight fh-text="center">[SM]</pre>
         <h6>Infinte Scale</h6>
         <h5>Infinte Scale</h5>
         <h4>Infinte Scale</h4>
@@ -62,8 +67,8 @@
         </p>
       </section>
 
-      <section fh-scale="md">
-        <pre fh-scale-root="md" fh-highlight fh-text="center">[MD]</pre>
+      <section scale="md">
+        <pre scale-root="md" fh-highlight fh-text="center">[MD]</pre>
         <h6>Infinte Scale</h6>
         <h5>Infinte Scale</h5>
         <h4>Infinte Scale</h4>
@@ -78,8 +83,8 @@
         </p>
       </section>
 
-      <section fh-scale="lg">
-        <pre fh-scale-root="md" fh-highlight fh-text="center">[LG]</pre>
+      <section scale="lg">
+        <pre scale-root="md" fh-highlight fh-text="center">[LG]</pre>
         <h6>Infinte Scale</h6>
         <h5>Infinte Scale</h5>
         <h4>Infinte Scale</h4>
@@ -94,8 +99,8 @@
         </p>
       </section>
 
-      <section fh-scale="xl">
-        <pre fh-scale-root="md" fh-highlight fh-text="center">[XL]</pre>
+      <section scale="xl">
+        <pre scale-root="md" fh-highlight fh-text="center">[XL]</pre>
         <h6>Infinte Scale</h6>
         <h5>Infinte Scale</h5>
         <h4>Infinte Scale</h4>
@@ -110,8 +115,8 @@
         </p>
       </section>
 
-      <section fh-scale="xxl">
-        <pre fh-scale-root="md" fh-highlight fh-text="center">[XXL]</pre>
+      <section scale="xxl">
+        <pre scale-root="md" fh-highlight fh-text="center">[XXL]</pre>
         <h6>Infinte Scale</h6>
         <h5>Infinte Scale</h5>
         <h4>Infinte Scale</h4>
@@ -126,8 +131,8 @@
         </p>
       </section>
 
-      <section fh-scale="xxxl">
-        <pre fh-scale-root="md" fh-highlight fh-text="center">[XXXL]</pre>
+      <section scale="xxxl">
+        <pre scale-root="md" fh-highlight fh-text="center">[XXXL]</pre>
         <h6>Infinte Scale</h6>
         <h5>Infinte Scale</h5>
         <h4>Infinte Scale</h4>
@@ -144,12 +149,9 @@
     </div>
 
     <div class="content">
-      <section>
-        <Button size="xl" text="Button inherit from Base"/>
-      </section>
 
       <section>
-        <div class="buttonCmp" fh-scale="xxs">
+        <div class="buttonCmp" scale="xxs">
           <button class="button">
             <span class="text">Button</span>
           </button>
@@ -157,21 +159,21 @@
       </section>
 
       <section>
-        <div class="buttonCmp" fh-scale="xs">
+        <div class="buttonCmp" scale="xs">
           <button class="button">
             <span class="icon">
               <svg width="100%" height="100%" viewBox="0 0 16 17">
                 <use xlink:href="#icon-cog"></use>
               </svg>
             </span>
-            
+
             <span class="text">Button</span>
           </button>
         </div>
       </section>
 
       <section>
-        <div class="buttonCmp" fh-scale="sm">
+        <div class="buttonCmp" scale="sm">
           <button class="button">
             <span class="icon">
               <svg
@@ -228,7 +230,7 @@
       </section>
 
       <section>
-        <div class="buttonCmp" fh-scale="md">
+        <div class="buttonCmp" scale="md">
           <button class="button">
             <span class="text">Button</span>
           </button>
@@ -236,7 +238,7 @@
       </section>
 
       <section>
-        <div class="buttonCmp" fh-scale="lg">
+        <div class="buttonCmp" scale="lg">
           <button class="button">
             <span class="text">Button</span>
           </button>
@@ -244,7 +246,7 @@
       </section>
 
       <section>
-        <div class="buttonCmp" fh-scale="xl">
+        <div class="buttonCmp" scale="xl">
           <button class="button">
             <span class="text">Button</span>
           </button>
@@ -252,7 +254,7 @@
       </section>
 
       <section>
-        <div class="buttonCmp" fh-scale="xxl">
+        <div class="buttonCmp" scale="xxl">
           <button class="button">
             <span class="text">Button</span>
           </button>
@@ -263,14 +265,14 @@
 
       <section class="cardCmp">
         <div class="buttonCmp">
-          <button fh-scale="xxs">
+          <button scale="xxs">
             <span class="text">Button</span>
           </button>
         </div>
       </section>
 
       <div class="buttonCmp">
-        <button fh-scale="xs">
+        <button scale="xs">
           <span class="text">Button</span>
         </button>
       </div>
@@ -278,7 +280,7 @@
       <br>
 
       <div class="buttonCmp">
-        <button fh-scale="sm">
+        <button scale="sm">
           <span class="text" pxtoem>Button</span>
         </button>
       </div>
@@ -286,12 +288,12 @@
       <br>
 
       <div
-        fh-scale="lg"
+        scale="lg"
         class="buttonCmp"
         style="background: hsla(261, 69%, 45%, 0.24);display: flex;justify-content: space-between;padding: 0.5em;"
       >
         <div style="text-align:right;background: #420c7121;margin: 0 0 auto auto;width: 100%;">
-          <button fh-scale style="
+          <button scale style="
  margin: auto;font-size: 1em;">
             <span class="text">Button</span>
           </button>
@@ -301,7 +303,7 @@
       <br>
 
       <div class="buttonCmp">
-        <button fh-scale="lg">
+        <button scale="lg">
           <span class="text">Button</span>
         </button>
       </div>
@@ -309,7 +311,7 @@
       <br>
 
       <div class="buttonCmp">
-        <button fh-scale="xl">
+        <button scale="xl">
           <span class="text">Button</span>
         </button>
       </div>
@@ -317,7 +319,7 @@
       <br>
 
       <div class="buttonCmp">
-        <button fh-scale="xxl">
+        <button scale="xxl">
           <span class="text">Button</span>
         </button>
       </div>
@@ -326,105 +328,16 @@
 </template>
 
 <script>
-import Button from "./Button";
+  import Button from './Button'
 
-export default {
-  name: "InfiniteScale",
-  components: {
-    Button
+  export default {
+    name: 'InfiniteScale',
+    components: {
+      Button
+    }
   }
-};
 </script>
 
 <style lang="scss" scoped>
-@import "../shared/core/index";
-$fh-component: '[class*=c-]'; 
-$fh-scale-factor: 0.05 !default;
-$fh-scale-levels: 64 !default;
-$fh-scale-steps: (
-  xxs: 0.5,
-  xs: 0.75,
-  sm: 1.0,
-  md: 1.25,
-  lg: 1.5,
-  xl: 1.75,
-  xxl: 2.0
-) !default;
-
-@mixin scale-handler($params) {
-
-  $options: map-merge((
-    ctx: '', 
-    size: 1, 
-    unit: rem, 
-    step: 'md'
-  ), $params);
-
-  $ctx: map-get($options, ctx);
-  $step: map-get($options, step);
-  $size: map-get($options, size);
-
-  #{$ctx}[fh-scale='#{$step}'],
-  #{$ctx}.fh-scale--#{$step} {
-    font-size: $size + map-get($options, unit);
-  }
-
-  #{$ctx}[fh-scale-root='#{$step}'],
-  #{$ctx}.fh-scale-root--#{$step} {
-    font-size: $size + rem;
-  }
-
-  #{$ctx}[fh-scale-inherit='#{$step}'],
-  #{$ctx}.fh-scale-inherit--#{$step} {
-    font-size: $size + em;
-  }
-}
-
-@mixin scale-steps($ctx, $unit) {
-  @each $step in $fh-scale-steps {
-    $idx: index($fh-scale-steps, $step);
-    $key: nth(map-keys($fh-scale-steps), $idx);
-    $options: (
-      ctx: $ctx, 
-      unit: $unit,
-      size: map-get($fh-scale-steps, $key),  
-      step: $key
-    );
-
-    @include scale-handler($options);
-  }
-}
-
-@mixin scale-levels($ctx, $unit) {
-  @for $idx from 1 through $fh-scale-levels {
-    $options: (
-      ctx: $ctx, 
-      unit: $unit,
-      size: $fh-scale-factor * $idx,  
-      step: $idx
-    );
-    @include scale-handler($options);
-  }
-}
-
-@mixin fh-scale($target: self, $unit: em) {
-  $ctx: if($target == self, '&', '');
-  @include scale-levels($ctx, $unit);
-  @include scale-steps($ctx, $unit);
-}
-
-
-@include fh-scale(child, em);
-
-#{$fh-component} {
-  
-  font-size: 1rem;
-  @include fh-scale(self, rem);
-
-  &.is-scalable {
-    font-size: 1em;
-    @include fh-scale(self, rem);
-  }  
-}
-
+  @import "../shared/core/index";
 </style>

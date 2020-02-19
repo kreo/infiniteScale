@@ -1,10 +1,10 @@
 <template>
-  <Skel :tagName="tagName" :class="['c-icon', classes]">
-    <div class="inner">
+  <Skel :tagName="tagName" :class="['icon', classes]">
+
       <svg width="100%" height="100%" viewBox="0 0 16 17">
         <use xlink:href="#icon-cog"></use>
       </svg>
-    </div>
+
   </Skel>
 </template>
 
@@ -26,7 +26,7 @@ export default {
     classes() {
       return {
         [this.scalableClasses]: this.scalable,
-        [this.sizeClasses]: this.size
+        [this.scaleClasses]: this.scale
       };
     }
   }

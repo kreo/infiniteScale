@@ -16,15 +16,16 @@ export default {
   data() {
     return {
       scalableClasses: [`is-scalable`],
-      sizeClasses: [`fh-scale--${this.size}`]
+      scaleClasses: [`scale--${this.scale}`]
     };
   },
   props: {
     tagName: VueTypes.string.def("div"),
     scalable: VueTypes.bool.def(true),
-    size: VueTypes.string,
+    scale: VueTypes.string,
     role: VueTypes.string,
-    link: VueTypes.string
+    href: VueTypes.string,
+    route: VueTypes.string
   }
 };
 </script>

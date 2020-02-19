@@ -2,22 +2,14 @@
   <Skel
     :tagName="tagName"
     :role="role"
-    :class="['c-button', classes]"
-    :href="getLink"
+    :class="['button', classes]"
+    :href="link"
   >
-    <div class="inner">
-      <span v-if="hasIconBefore" class="icon">
-        <Icon size="md" />
-      </span>
 
-      <span v-if="hasText" class="text">{{ text }}</span>
+    <Icon v-if="hasIconBefore" scale="xs" />
+    <span v-if="hasText" class="text">{{ text }}</span>
+    <Icon v-if="hasIconAfter" scale="md" />
 
-      <span v-if="hasIconAfter" class="icon">
-        <svg width="100%" height="100%" viewBox="0 0 16 17">
-          <use xlink:href="#icon-cog"></use>
-        </svg>
-      </span>
-    </div>
   </Skel>
 </template>
 
@@ -42,17 +34,26 @@ export default {
     hasIconBefore: VueTypes.bool.def(true),
     hasIconAfter: VueTypes.bool.def(true),
     role: VueTypes.string.def("button"),
-    link: VueTypes.string
   },
   computed: {
     classes() {
       return {
         [this.scalableClasses]: this.scalable,
-        [this.sizeClasses]: this.size
+        [this.scaleClasses]: this.scale
       };
     },
-    getLink() {
-      return this.tagName === "a" ? this.href : null;
+    link() {
+      console.log(this.tagName, this.href)
+
+      let url = ''
+
+      if (this.tagName === 'a') {
+        url = this.href
+      } else if (this.tagName === 'router-link') {
+        url = this.route
+      }
+
+      return url
     }
   }
 };
@@ -60,8 +61,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "../shared/core/index";
-
-.c-button {
-  content: "";
-}
 </style>
