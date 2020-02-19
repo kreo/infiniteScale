@@ -6,9 +6,17 @@
     :href="link"
   >
 
-    <Icon v-if="hasIconBefore" scale="xs" />
-    <span v-if="hasText" class="text">{{ text }}</span>
-    <Icon v-if="hasIconAfter" scale="md" />
+    <template v-if="hasBefore">
+      <slot name="before"></slot>
+    </template>
+
+    <template v-if="hasContent">
+      <slot name="content"></slot>
+    </template>
+
+    <template v-if="hasAfter">
+      <slot name="after"></slot>
+    </template>
 
   </Skel>
 </template>
@@ -16,13 +24,13 @@
 <script>
 import VueTypes from "vue-types";
 import Skel from "./Skel";
-import Icon from "./Icon";
+//import Icon from "./Icon";
 
 export default {
   name: "Button",
   extends: Skel,
   components: {
-    Icon
+
   },
   data() {
     return {};
@@ -31,8 +39,6 @@ export default {
     tagName: VueTypes.string.def("button"),
     hasText: VueTypes.bool.def(true),
     text: VueTypes.string.def("Button inherit"),
-    hasIconBefore: VueTypes.bool.def(true),
-    hasIconAfter: VueTypes.bool.def(true),
     role: VueTypes.string.def("button"),
   },
   computed: {
@@ -54,6 +60,15 @@ export default {
       }
 
       return url
+    },
+    hasBefore() {
+      return !!this.$slots['before']
+    },
+    hasContent() {
+      return !!this.$slots['content']
+    },
+    hasAfter() {
+      return !!this.$slots['after']
     }
   }
 };

@@ -2,7 +2,74 @@
   <div class="InfiniteScale">
 
     <section>
-      <Button tagName="a" href="/test" scale="xl" text="Button inherit from Base"/>
+      <Button tagName="a" href="/test" scale="xl">
+        <template v-slot:before>
+          <Media>
+            <svg width="100%" height="100%" viewBox="0 0 16 17">
+             <svg
+                width="100%"
+                height="100%"
+                viewBox="0 0 38 38"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <linearGradient x1="8.042%" y1="0%" x2="65.682%" y2="23.865%" id="a">
+                    <stop stop-color="var(--skin-color-default-fg)" stop-opacity="0" offset="0%"></stop>
+                    <stop
+                      stop-color="var(--skin-color-default-fg)"
+                      stop-opacity=".631"
+                      offset="63.146%"
+                    ></stop>
+                    <stop stop-color="var(--skin-color-default-fg)" offset="100%"></stop>
+                  </linearGradient>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <g transform="translate(1 1)">
+                    <path
+                      d="M36 18c0-9.94-8.06-18-18-18"
+                      id="Oval-2"
+                      stroke="url(#a)"
+                      stroke-width="2"
+                    >
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite"
+                      ></animateTransform>
+                    </path>
+                    <circle fill="var(--skin-color-default-fg)" cx="36" cy="18" r="1">
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        from="0 18 18"
+                        to="360 18 18"
+                        dur="0.9s"
+                        repeatCount="indefinite"
+                      ></animateTransform>
+                    </circle>
+                  </g>
+                </g>
+              </svg>
+            </svg>
+          </Media>
+        </template>
+
+        <template v-slot:content>
+          <TextCmp>Button inherit from Base</TextCmp>
+        </template>
+
+        <template v-slot:after>
+          <Media>
+            <svg width="100%" height="100%" viewBox="0 0 16 17">
+              <use xlink:href="#icon-cog"></use>
+            </svg>
+          </Media>
+        </template>
+
+      </Button>
     </section>
 
     <svg
@@ -328,11 +395,15 @@
 </template>
 
 <script>
+  import Media from './Media'
+  import TextCmp from './TextCmp'
   import Button from './Button'
 
   export default {
     name: 'InfiniteScale',
     components: {
+      Media,
+      TextCmp,
       Button
     }
   }

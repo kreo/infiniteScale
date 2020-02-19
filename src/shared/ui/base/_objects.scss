@@ -1,6 +1,6 @@
 .text,
 .button,
-.icon,
+.media,
 .inner {
   display: inline-flex;
   align-items: center;
@@ -11,20 +11,20 @@
   font-size: 1em;
 }
 
-.icon {
+.media {
   width: 1em;
 }
 
-.icon,
+.media,
 .text {
   color: inherit;
 }
 
-.icon + .text {
+.media + .text {
   margin-left: 0.5em;
 }
 
-.text + .icon {
+.text + .media {
   margin-left: 0.5em;
 }
 
