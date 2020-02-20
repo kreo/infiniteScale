@@ -1,6 +1,6 @@
 <template>
   <base-cmp
-    :tagName="tagName"
+    :tagName="tagName || tag"
     :role="role"
     :class="[classes]"
     :href="link"
@@ -35,10 +35,11 @@
       return {}
     },
     props: {
+      tag: VueTypes.string.def('button'),
       tagName: VueTypes.string.def('button'),
-      hasText: VueTypes.bool.def(true),
-      text: VueTypes.string,
       role: VueTypes.string.def('button'),
+      url: VueTypes.string,
+      //route: VueTypes.string
     },
     computed: {
       extraClasses () {
@@ -47,10 +48,14 @@
         }
       },
       link () {
-        return this.tagName === 'a' ? this.href : null
+        console.warn(this.tagName, this.url);
+        return this.tagName === 'a' ? this.url : null
       },
       route () {
         return this.tagName === 'router-link' ? this.to : null
+      },
+      hasText() {
+        return !!this.text
       },
       hasBefore () {
         return !!this.$slots['before']
@@ -66,5 +71,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../shared/core/index";
+  @import "../styles/core/";
 </style>

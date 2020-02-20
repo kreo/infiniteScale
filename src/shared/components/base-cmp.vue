@@ -24,9 +24,8 @@ export default {
     scalable: VueTypes.bool.def(true),
     scale: VueTypes.string,
     role: VueTypes.string,
-    href: VueTypes.string,
     to: VueTypes.object,
-    //route: VueTypes.string
+    text: VueTypes.string
   },
   computed: {
     baseClasses () {

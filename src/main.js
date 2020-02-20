@@ -1,10 +1,10 @@
 import Vue from "vue";
 import App from "./App.vue";
 // Styles
-import "./shared/main.scss";
+import "./shared/styles/main.scss";
 
 // Components
-import BaseCmp from "./components/base-cmp"
+import BaseCmp from "./shared/components/base-cmp"
 
 Vue.component("BaseCmp", BaseCmp)
 

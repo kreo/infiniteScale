@@ -3,7 +3,7 @@
 
     <section>
 
-      <button-cmp tagName="a" href="/hello" scale="15">
+      <button-cmp tag="a" url="/hello" scale="15">
         <template #before>
           <media-cmp>
             <svg width="100%" height="100%" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@
 
     <section>
 
-      <button-cmp tagName="a" href="/hello" scale="20">
+      <button-cmp scale="20">
 
         <template #content>
           <text-cmp>Button Inherit</text-cmp>
@@ -463,10 +463,10 @@
 </template>
 
 <script>
-  import MediaCmp from './media-cmp'
-  import TextCmp from './text-cmp'
-  import ButtonCmp from './button-cmp'
-  import CardCmp from './card-cmp'
+  import MediaCmp from '../../shared/components/media-cmp'
+  import TextCmp from '../../shared/components/text-cmp'
+  import ButtonCmp from '../../shared/components/button-cmp'
+  import CardCmp from '../../shared/components/card-cmp'
 
   export default {
     name: 'InfiniteScaleCmp',
@@ -480,5 +480,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../shared/core/index";
+  @import "../../shared/styles/core/index";
 </style>

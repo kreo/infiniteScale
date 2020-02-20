@@ -59,5 +59,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../shared/core/index";
+  @import "../styles/core/";
 </style>

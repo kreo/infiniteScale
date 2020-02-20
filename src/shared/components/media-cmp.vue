@@ -12,19 +12,19 @@
   import BaseCmp from './base-cmp'
 
   export default {
-    name: 'TextCmp',
+    name: 'MediaCmp',
     extends: BaseCmp,
     components: {},
     data () {
       return {}
     },
     props: {
-      tagName: VueTypes.string.def('span')
+      tagName: VueTypes.string.def('i')
     },
     computed: {
       extraClasses () {
         return {
-          'text': true
+          'media': true
         }
       },
     }
@@ -32,9 +32,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../shared/core/index";
-
-  .content {
-    content: "";
-  }
+  @import "../styles/core/";
 </style>
