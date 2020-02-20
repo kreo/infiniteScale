@@ -463,10 +463,10 @@
 </template>
 
 <script>
-  import MediaCmp from '../../shared/components/media-cmp'
-  import TextCmp from '../../shared/components/text-cmp'
-  import ButtonCmp from '../../shared/components/button-cmp'
-  import CardCmp from '../../shared/components/card-cmp'
+  import MediaCmp from '../../components/media-cmp'
+  import TextCmp from '../../components/text-cmp'
+  import ButtonCmp from '../../components/button-cmp'
+  import CardCmp from '../../components/card-cmp'
 
   export default {
     name: 'InfiniteScaleCmp',
@@ -480,5 +480,5 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../../shared/styles/core/index";
+  @import "../../styles/core/index";
 </style>
