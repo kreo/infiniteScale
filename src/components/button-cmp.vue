@@ -49,10 +49,10 @@
       },
       link () {
         console.warn(this.tagName, this.url);
-        return this.tagName === 'a' ? this.url : null
+        return this.tagName || this.tag === 'a' ? this.url : null
       },
       route () {
-        return this.tagName === 'router-link' ? this.to : null
+        return this.tagName || this.tag === 'router-link' ? this.to : null
       },
       hasText() {
         return !!this.text
