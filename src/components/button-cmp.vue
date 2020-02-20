@@ -4,7 +4,6 @@
     :role="role"
     :class="[classes]"
     :href="link"
-    :to="route"
   >
 
     <template v-if="hasBefore">
@@ -38,8 +37,7 @@
       tag: VueTypes.string.def('button'),
       tagName: VueTypes.string.def('button'),
       role: VueTypes.string.def('button'),
-      url: VueTypes.string,
-      //route: VueTypes.string
+      url: VueTypes.string
     },
     computed: {
       extraClasses () {
@@ -50,9 +48,6 @@
       link () {
         console.warn(this.tagName, this.url);
         return this.tagName || this.tag === 'a' ? this.url : null
-      },
-      route () {
-        return this.tagName || this.tag === 'router-link' ? this.to : null
       },
       hasText() {
         return !!this.text

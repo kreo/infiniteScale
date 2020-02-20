@@ -87,7 +87,7 @@
         </template>
 
         <template #after>
-          <button-cmp tagName="a" href="/hello" scale="25">
+          <button-cmp tag="a" href="/hello" scale="25">
             <template #before>
               <media-cmp>
                 <img src="//pbs.twimg.com/profile_images/701940186838532096/TarzXAkb.jpg" alt="">
@@ -107,7 +107,7 @@
             </template>
 
             <template #after>
-              <button-cmp tagName="a" href="/hello" scale="25">
+              <button-cmp tag="section" href="/hello" scale="25">
                 <template #before>
                   <media-cmp>
                     <img src="//pbs.twimg.com/profile_images/701940186838532096/TarzXAkb.jpg" alt="">
@@ -296,7 +296,7 @@
       <section>
         <div class="buttonCmp" scale="xs">
           <button class="button">
-            <span class="icon">
+            <span class="media">
               <svg width="100%" height="100%" viewBox="0 0 16 17">
                 <use xlink:href="#icon-cog"></use>
               </svg>
@@ -310,7 +310,7 @@
       <section>
         <div class="buttonCmp" scale="sm">
           <button class="button">
-            <span class="icon">
+            <span class="media">
               <svg
                 width="100%"
                 height="100%"
