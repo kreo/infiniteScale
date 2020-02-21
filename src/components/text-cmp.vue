@@ -32,9 +32,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../shared/core/index";
-
-  .content {
-    content: "";
-  }
+  @import "../styles/core/";
+  @import "../styles/abstracts/*";
 </style>

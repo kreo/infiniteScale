@@ -1,0 +1,10 @@
+%Bar {
+  @include Align(x, start);
+  width: 100%;
+  height: auto;
+}
+
+@mixin Bar() {
+  @extend %Bar;
+
+}

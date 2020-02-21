@@ -1,10 +1,9 @@
 <template>
   <base-cmp
-    :tagName="tagName"
+    :tagName="tagName || tag"
     :role="role"
     :class="[classes]"
     :href="link"
-    :to="route"
   >
 
     <template v-if="hasBefore">
@@ -35,22 +34,24 @@
       return {}
     },
     props: {
+      tag: VueTypes.string.def('button'),
       tagName: VueTypes.string.def('button'),
-      hasText: VueTypes.bool.def(true),
-      text: VueTypes.string,
       role: VueTypes.string.def('button'),
+      url: VueTypes.string
     },
     computed: {
       extraClasses () {
         return {
-          'button': true
+          'button': true,
+          'pippo': 1
         }
       },
       link () {
-        return this.tagName === 'a' ? this.href : null
+        console.warn(this.tagName, this.url);
+        return this.tagName || this.tag === 'a' ? this.url : null
       },
-      route () {
-        return this.tagName === 'router-link' ? this.to : null
+      hasText() {
+        return !!this.text
       },
       hasBefore () {
         return !!this.$slots['before']
@@ -66,5 +67,20 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../shared/core/index";
+  @import "../styles/core/";
+  @import "../styles/abstracts/*";
+</style>
+
+<style lang="stylus" scoped>
+  .pippo
+    content 'ciaone'
+</style>
+
+<style lang="postcss" scoped>
+  .pippo {
+    --pippo-fb: black;
+    --pippo: red;
+
+    color:var(--pippo, var(--pippo-fb));
+  }
 </style>

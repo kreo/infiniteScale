@@ -1,7 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 // Styles
-import "./shared/main.scss";
+import "./styles/main.scss";
 
 // Components
 import BaseCmp from "./components/base-cmp"

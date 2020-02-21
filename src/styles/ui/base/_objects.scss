@@ -1,0 +1,37 @@
+
+.text,
+.button,
+.media,
+.card {
+  display: inline-flex;
+  align-items: center;
+}
+
+.inner {
+  display: flex;
+}
+
+.text {
+  @extend %Text;
+}
+
+.media {
+  @extend %Media;
+}
+
+.button {
+  @extend %Button;
+}
+
+.header,
+.footer {
+  @extend %Bar;
+}
+
+.card {
+  @include Card();
+}
+
+.content {
+
+}

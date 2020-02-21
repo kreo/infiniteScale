@@ -32,5 +32,6 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../shared/core/index";
+  @import "../styles/core/";
+  @import "../styles/abstracts/*";
 </style>

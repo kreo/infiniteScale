@@ -1,0 +1,60 @@
+$Align: (
+  axis: (
+    start: flex-start,
+    center: center,
+    end: flex-end
+  )
+);
+
+@function align-axis($pos) {
+  @return map-deep-get($Align, "axis", $pos);
+}
+
+%Align-x {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+%Align-x-start {
+  justify-content: align-axis(start);
+}
+
+%Align-x-center {
+  justify-content: align-axis(center);
+}
+
+%Align-x-end {
+  justify-content: align-axis(end);
+}
+
+%Align-y {
+  display: flex;
+  flex-direction: column;
+}
+
+%Align-y-start {
+  align-items: align-axis(start);
+}
+
+%Align-y-center {
+  align-items: align-axis(center);
+}
+
+%Align-y-end {
+  align-items: align-axis(end);
+}
+
+@mixin Align($axis: 'x', $position: 'center') {
+  @if $axis {
+    @if $axis == 'x' {
+      @extend %Align-x;
+    }
+    @else if $axis == 'y' {
+      @extend %Align-y;
+    }
+
+    @if $position {
+      @extend %Align-#{$axis}-#{$position};
+    }
+  }
+}
