@@ -1,0 +1,8 @@
+%Media {
+  width: 1em;
+  color: inherit;
+}
+
+@mixin Media() {
+  @extend %Media;
+}

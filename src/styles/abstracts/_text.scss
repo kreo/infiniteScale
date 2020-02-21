@@ -1,0 +1,8 @@
+%Text {
+  font-size: 1em;
+  color: inherit;
+}
+
+@mixin Text() {
+  @extend %Text;
+}

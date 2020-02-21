@@ -42,7 +42,8 @@
     computed: {
       extraClasses () {
         return {
-          'button': true
+          'button': true,
+          'pippo': 1
         }
       },
       link () {
@@ -67,4 +68,19 @@
 
 <style lang="scss" scoped>
   @import "../styles/core/";
+  @import "../styles/abstracts/*";
+</style>
+
+<style lang="stylus" scoped>
+  .pippo
+    content 'ciaone'
+</style>
+
+<style lang="postcss" scoped>
+  .pippo {
+    --pippo-fb: black;
+    --pippo: red;
+
+    color:var(--pippo, var(--pippo-fb));
+  }
 </style>

@@ -1,15 +1,3 @@
-%Bar {
-  display: flex;
-  width: 100%;
-  height: auto;
-  align-items: center;
-}
-
-%Header,
-%Footer {
-  @extend %Bar;
-}
-
 %Button {
   font-size: 1em;
   appearance: none;
@@ -49,30 +37,6 @@
   }
 }
 
-%Card {
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.33em;
-  background-color: white;
-  color: $fh-skin-color-default-fg;
-  box-shadow: 0 2px 2px rgba($fh-skin-color-default-fg, 0.08),
-    0 4px 4px rgba($fh-skin-color-default-fg, 0.06),
-    0 8px 8px rgba($fh-skin-color-default-fg, 0.04),
-    0 16px 16px rgba($fh-skin-color-default-fg, 0.02);
-
-  .header,
-  .content,
-  .footer {
-    padding: 1em;
-  }
-}
-
-%Media {
-  width: 1em;
-  color: inherit;
-}
-
-%Text {
-  font-size: 1em;
-  color: inherit;
+@mixin Button() {
+  @extend %Button;
 }
