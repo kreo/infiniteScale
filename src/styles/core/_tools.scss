@@ -89,3 +89,7 @@
     @content;
   }
 }
+
+@function fh-set-glob-prefix($name) {
+  @return "#{fh-map-get-deep($fh-settings, prefix, elements)}-#{$name}";
+}
