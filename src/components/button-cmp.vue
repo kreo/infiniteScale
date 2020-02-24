@@ -69,12 +69,3 @@
 <style lang="scss" scoped>
 
 </style>
-
-<style lang="postcss" scoped>
-  .pippo {
-    --pippo-fb: black;
-    --pippo: red;
-
-    color:var(--pippo, var(--pippo-fb));
-  }
-</style>

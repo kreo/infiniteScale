@@ -67,3 +67,11 @@
 @function convert-px-to-em($target, $context: 16) {
   @return ($target / $context) + 0em;
 }
+
+@mixin force-self-tag-context($tag, $prop, $val: inherit) {
+  @at-root {
+    #{$tag}#{&} {
+      #{$prop}: $val;
+    }
+  }
+}
