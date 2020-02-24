@@ -105,7 +105,7 @@
     $options
   );
 
-  @debug map-get($options, name);
+  @warn "Created Dynamic Sass Component: #{map-get($options, name)}";
 
   .#{map-get($options, name)} {
     @extend %o-#{$name};

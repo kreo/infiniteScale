@@ -2,6 +2,6 @@
 
 }
 
-@mixin c-Content($options: ()) {
+@mixin c-content($options: ()) {
   @include component(map-get($ui, 'content'), $options);
 }
