@@ -88,7 +88,7 @@
 
         <template #after>
 
-          <button-cmp tag="a" href="/hello" scale="25">
+          <button-cmp tag="a" url="/hello" scale="25">
             <template #before>
               <media-cmp>
                 <img src="//pbs.twimg.com/profile_images/701940186838532096/TarzXAkb.jpg" alt="">
@@ -108,7 +108,7 @@
             </template>
 
             <template #after>
-              <button-cmp tag="section" href="/hello" scale="25">
+              <button-cmp tag="section" scale="25">
                 <template #before>
                   <media-cmp>
                     <img src="//pbs.twimg.com/profile_images/701940186838532096/TarzXAkb.jpg" alt="">
@@ -124,7 +124,7 @@
             </template>
 
             <template #after>
-              <button-cmp tagName="a" href="/hello" scale="25">
+              <button-cmp tagName="a" url="/hello" scale="25">
                 <template #before>
                   <media-cmp>
                     <img src="//pbs.twimg.com/profile_images/701940186838532096/TarzXAkb.jpg" alt="">
