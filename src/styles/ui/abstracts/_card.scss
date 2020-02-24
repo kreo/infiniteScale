@@ -14,3 +14,9 @@
 @mixin Card() {
   @extend %Card;
 }
+
+@if $abstracts-as-output {
+  .card {
+    @include Card();
+  }
+}

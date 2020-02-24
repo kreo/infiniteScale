@@ -2,6 +2,7 @@
   @include Align(x, center);
   font-size: 1em;
   appearance: none;
+  cursor: pointer;
   height: fit-content;
   line-height: 1.25;
   margin-right: auto;
@@ -18,7 +19,6 @@
   text-align: center;
   text-decoration: none;
   word-spacing: normal;
-  cursor: default;
   color: $fh-skin-color-default-fg;
   background-color: $fh-skin-color-default-bg;
   border: 1px solid $fh-skin-color-default-bg;
@@ -26,6 +26,10 @@
     0 4px 4px rgba($fh-skin-color-default-fg, 0.06),
     0 8px 8px rgba($fh-skin-color-default-fg, 0.04),
     0 16px 16px rgba($fh-skin-color-default-fg, 0.02);
+
+  &.is-disabled, &[disabled] {
+    cursor: not-allowed;
+  }
 
   .media + .text {
     margin-left: 0.5em;
@@ -38,4 +42,11 @@
 
 @mixin Button() {
   @extend %Button;
+}
+
+
+@if $abstracts-as-output {
+  .button {
+    @include Button();
+  }
 }

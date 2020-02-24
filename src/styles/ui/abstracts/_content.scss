@@ -1,0 +1,13 @@
+%Content {
+
+}
+
+@mixin Content() {
+  @extend %Content;
+}
+
+@if $abstracts-as-output {
+  .content {
+    @include Content();
+  }
+}

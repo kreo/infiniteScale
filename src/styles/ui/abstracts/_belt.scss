@@ -1,4 +1,19 @@
 %Belt {
   display: flex;
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin Belt($max-width: 100%) {
+  @extend %Belt;
+  @if $max-width {
+    max-width: $max-width;
+  }
+}
+
+@if $abstracts-as-output {
+  .belt {
+    @include Belt(1200px);
+  }
 }

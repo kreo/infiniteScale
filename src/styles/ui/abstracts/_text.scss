@@ -7,3 +7,11 @@
 @mixin Text() {
   @extend %Text;
 }
+
+
+@if $abstracts-as-output {
+  .text {
+    @include Text();
+  }
+}
+

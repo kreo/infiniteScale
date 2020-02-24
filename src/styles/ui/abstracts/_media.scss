@@ -7,3 +7,9 @@
 @mixin Media() {
   @extend %Media;
 }
+
+@if $abstracts-as-output {
+  .media {
+    @include Media();
+  }
+}

@@ -12,3 +12,9 @@
 @mixin Bar() {
   @extend %Bar;
 }
+
+@if $abstracts-as-output {
+  .bar {
+    @include Bar();
+  }
+}
