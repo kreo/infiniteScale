@@ -1,4 +1,5 @@
 %Text {
+  @include Align(x, center);
   font-size: 1em;
   color: inherit;
 }

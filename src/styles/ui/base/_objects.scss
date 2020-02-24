@@ -1,14 +1,5 @@
-
-.text,
-.button,
-.media,
-.card {
-  display: inline-flex;
-  align-items: center;
-}
-
-.inner {
-  display: flex;
+.belt {
+  @extend %Belt;
 }
 
 .text {
@@ -23,13 +14,12 @@
   @extend %Button;
 }
 
-.header,
-.footer {
+.bar {
   @extend %Bar;
 }
 
 .card {
-  @include Card();
+  @extend %Card;
 }
 
 .content {

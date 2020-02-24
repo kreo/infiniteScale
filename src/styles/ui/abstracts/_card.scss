@@ -1,0 +1,16 @@
+%Card {
+  @include Align(y, center);
+  border-radius: 0.33em;
+  background-color: white;
+  color: $fh-skin-color-default-fg;
+  box-shadow: $fh-skin-shadows-default-fg;
+
+  .bar,
+  .content {
+    padding: 1em;
+  }
+}
+
+@mixin Card() {
+  @extend %Card;
+}

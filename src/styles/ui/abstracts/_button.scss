@@ -1,9 +1,10 @@
 %Button {
+  @include Align(x, center);
   font-size: 1em;
   appearance: none;
   height: fit-content;
   line-height: 1.25;
-  margin: 0 auto;
+  margin-right: auto;
   padding: 0.33em 0.75em;
   border-radius: 0.33em;
   font-family: inherit;
@@ -17,8 +18,6 @@
   text-align: center;
   text-decoration: none;
   word-spacing: normal;
-  display: inline-flex;
-  align-items: flex-start;
   cursor: default;
   color: $fh-skin-color-default-fg;
   background-color: $fh-skin-color-default-bg;

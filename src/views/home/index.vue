@@ -87,6 +87,7 @@
         </template>
 
         <template #after>
+
           <button-cmp tag="a" href="/hello" scale="25">
             <template #before>
               <media-cmp>

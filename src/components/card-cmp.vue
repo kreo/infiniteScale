@@ -5,20 +5,26 @@
   >
 
     <template v-if="hasBefore">
-      <header class="header">
-        <slot name="before"></slot>
+      <header class="bar bar--top">
+        <div class="belt">
+          <slot name="before"></slot>
+        </div>
       </header>
     </template>
 
     <template v-if="hasContent">
       <div class="content">
-        <slot name="content"></slot>
+        <div class="belt">
+          <slot name="content"></slot>
+        </div>
       </div>
     </template>
 
     <template v-if="hasAfter">
-      <footer class="footer">
-        <slot name="after"></slot>
+      <footer class="bar bar--bottom">
+        <div class="belt">
+          <slot name="after"></slot>
+        </div>
       </footer>
     </template>
 

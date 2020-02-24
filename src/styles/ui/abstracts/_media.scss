@@ -1,4 +1,5 @@
 %Media {
+  @include Align(x, center);
   width: 1em;
   color: inherit;
 }

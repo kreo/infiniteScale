@@ -13,6 +13,7 @@ $Align: (
 %Align-x {
   display: inline-flex;
   flex-direction: row;
+  align-items: center;
 }
 
 %Align-x-start {
@@ -28,8 +29,9 @@ $Align: (
 }
 
 %Align-y {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 %Align-y-start {

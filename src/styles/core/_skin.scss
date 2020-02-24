@@ -1,4 +1,66 @@
+/// Colors
 $fh-skin-color-default-fg: #404142 !default;
 $fh-skin-color-default-bg: #efeeed !default;
 $fh-skin-color-primary: #5db1f9 !default;
 $fh-skin-color-primary-darken: darken($fh-skin-color-primary, 20%) !default;
+
+/// Shadows
+$fh-skin-shadows-default-fg:
+    0 2px 2px rgba($fh-skin-color-default-fg, 0.08),
+    0 4px 4px rgba($fh-skin-color-default-fg, 0.06),
+    0 8px 8px rgba($fh-skin-color-default-fg, 0.04),
+    0 16px 16px rgba($fh-skin-color-default-fg, 0.02) !default;
+
+$Skin: (
+  default: (
+    color-foreground: #404142,
+    color-background: #efeeed
+  ),
+  primary: (
+    color-foreground: #5db1f9,
+    color-background: white
+  ),
+  elevation: (
+    0: '',
+    1: '',
+    2: '',
+    3: '',
+    4: '',
+    5: ''
+  )
+);
+
+@function skin-get-facade($prop) {
+  @return map-get($Skin, $prop);
+}
+
+@function skin-get-color($facade) {
+  @return map-get($facade, $color)
+}
+
+@mixin Skin($options: (
+  facade: default,
+  type: filled,
+  has-border: true,
+  has-shadows: false
+ )) {
+
+  $facade: map-get($options, facade);
+  $type: map-get($options, type);
+  $has-border: map-get($options, has-border);
+  $has-shadows: map-get($options, has-shadows);
+
+  color: map-get($Skin, #{$local-color}-fg);
+  background-color: map-get($Skin, color-#{$color-bg}-bg);
+
+  @if $hasBorder {
+    border: 1px solid map-get($Skin, color-#{$color-bg}-bg);
+  }
+
+  @if $hasShadows {
+    box-shadow: 0 2px 2px rgba($fh-skin-color-default-fg, 0.08),
+    0 4px 4px rgba($fh-skin-color-default-fg, 0.06),
+    0 8px 8px rgba($fh-skin-color-default-fg, 0.04),
+    0 16px 16px rgba($fh-skin-color-default-fg, 0.02);
+  }
+}
