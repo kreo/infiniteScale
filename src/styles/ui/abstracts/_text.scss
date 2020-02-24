@@ -1,10 +1,10 @@
-%o-text {
-  @include align(x, center);
+%fh-text {
+  @include fh-align(x, center);
   font-size: 1em;
   color: inherit;
 }
 
-@mixin c-text($options: ()) {
-  @include component(map-get($ui, 'text'), $options);
+@mixin fh-text($options: ()) {
+  @include fh-component(map-get($fh-ui, 'text'), $options);
 }
 

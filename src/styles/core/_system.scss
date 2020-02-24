@@ -1,4 +1,4 @@
-$ui: (
+$fh-ui: (
   bar: 'bar',
   button: 'button',
   content: 'content',
@@ -7,4 +7,5 @@ $ui: (
   belt: 'belt',
   text: 'text'
 );
-$component: "[class*=Cmp]";
+
+$fh-component: "[class*=Cmp]";

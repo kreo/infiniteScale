@@ -1,9 +1,9 @@
-%o-media {
-  @include align(x, center);
+%fh-media {
+  @include fh-align(x, center);
   width: 1em;
   color: inherit;
 }
 
-@mixin c-media($options: ()) {
-  @include component(map-get($ui, 'media'), $options);
+@mixin fh-media($options: ()) {
+  @include fh-component(map-get($fh-ui, 'media'), $options);
 }

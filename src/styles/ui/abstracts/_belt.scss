@@ -1,12 +1,12 @@
-%o-belt {
+%fh-belt {
   display: flex;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
 
-@mixin c-belt($options: ()) {
-  @include component(map-get($ui, 'belt'), $options) {
+@mixin fh-belt($options: ()) {
+  @include fh-component(map-get($fh-ui, 'belt'), $options) {
     $w-max: map-get($options, width-max);
     @if $w-max {
       max-width: $w-max;

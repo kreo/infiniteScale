@@ -1,5 +1,5 @@
-%o-bar {
-  @include align(x, start);
+%fh-bar {
+  @include fh-align(x, start);
   width: 100%;
   height: auto;
 
@@ -9,6 +9,6 @@
   }
 }
 
-@mixin c-bar($options: ()) {
-  @include component(map-get($ui, 'bar'), $options);
+@mixin fh-bar($options: ()) {
+  @include fh-component(map-get($fh-ui, 'bar'), $options);
 }

@@ -1,5 +1,5 @@
-%o-button {
-  @include align(x, center);
+%fh-button {
+  @include fh-align(x, center);
   font-size: 1em;
   appearance: none;
   cursor: pointer;
@@ -40,8 +40,8 @@
   }
 }
 
-@mixin c-button($options: ()) {
-  @include component(map-get($ui, 'button'), $options);
+@mixin fh-button($options: ()) {
+  @include fh-component(map-get($fh-ui, 'button'), $options);
 }
 
 

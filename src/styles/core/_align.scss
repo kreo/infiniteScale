@@ -1,4 +1,4 @@
-$align: (
+$fh-align: (
   axis: (
     start: flex-start,
     center: center,
@@ -6,57 +6,57 @@ $align: (
   )
 );
 
-@function align-axis($pos) {
-  @return map-get-deep($align, "axis", $pos);
+@function fh-align-axis($pos) {
+  @return fh-map-get-deep($fh-align, "axis", $pos);
 }
 
-%align-x {
+%fh-align-x {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
 }
 
-%align-x-start {
-  justify-content: align-axis(start);
+%fh-align-x-start {
+  justify-content: fh-align-axis(start);
 }
 
-%align-x-center {
-  justify-content: align-axis(center);
+%fh-align-x-center {
+  justify-content: fh-align-axis(center);
 }
 
-%align-x-end {
-  justify-content: align-axis(end);
+%fh-align-x-end {
+  justify-content: fh-align-axis(end);
 }
 
-%align-y {
+%fh-align-y {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
 }
 
-%align-y-start {
-  align-items: align-axis(start);
+%fh-align-y-start {
+  align-items: fh-align-axis(start);
 }
 
-%align-y-center {
-  align-items: align-axis(center);
+%fh-align-y-center {
+  align-items: fh-align-axis(center);
 }
 
-%align-y-end {
-  align-items: align-axis(end);
+%fh-align-y-end {
+  align-items: fh-align-axis(end);
 }
 
-@mixin align($axis: 'x', $position: 'center') {
+@mixin fh-align($axis: 'x', $position: 'center') {
   @if $axis {
     @if $axis == 'x' {
-      @extend %align-x;
+      @extend %fh-align-x;
     }
     @else if $axis == 'y' {
-      @extend %align-y;
+      @extend %fh-align-y;
     }
 
     @if $position {
-      @extend %align-#{$axis}-#{$position};
+      @extend %fh-align-#{$axis}-#{$position};
     }
   }
 }

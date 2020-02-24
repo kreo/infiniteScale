@@ -1,6 +1,6 @@
-$scale-factor: 0.05 !default;
-$scale-levels: 64 !default;
-$scale-steps: (
+$fh-scale-factor: 0.05 !default;
+$fh-scale-levels: 64 !default;
+$fh-scale-steps: (
   xxs: 0.5,
   xs: 0.75,
   sm: 1.0,
@@ -39,14 +39,14 @@ $scale-steps: (
   }
 }
 
-@mixin scale-steps($ctx, $unit) {
-  @each $step in $scale-steps {
-    $idx: index($scale-steps, $step);
-    $key: nth(map-keys($scale-steps), $idx);
+@mixin fh-scale-steps($ctx, $unit) {
+  @each $step in $fh-scale-steps {
+    $idx: index($fh-scale-steps, $step);
+    $key: nth(map-keys($fh-scale-steps), $idx);
     $options: (
       ctx: $ctx,
       unit: $unit,
-      size: map-get($scale-steps, $key),
+      size: map-get($fh-scale-steps, $key),
       step: $key
     );
 
@@ -54,29 +54,29 @@ $scale-steps: (
   }
 }
 
-@mixin scale-levels($ctx, $unit) {
-  @for $idx from 1 through $scale-levels {
+@mixin fh-scale-levels($ctx, $unit) {
+  @for $idx from 1 through $fh-scale-levels {
     $options: (
       ctx: $ctx,
       unit: $unit,
-      size: $scale-factor * $idx,
+      size: $fh-scale-factor * $idx,
       step: $idx
     );
     @include scale-handler($options);
   }
 }
 
-@mixin scale($target: self, $unit: em) {
+@mixin fh-scale($target: self, $unit: em) {
   $ctx: if($target == self, '&', '');
-  @include scale-levels($ctx, $unit);
-  @include scale-steps($ctx, $unit);
+  @include fh-scale-levels($ctx, $unit);
+  @include fh-scale-steps($ctx, $unit);
 }
 
-@mixin scale-generator() {
-  @include scale(child, rem);
+@mixin fh-scale-generator() {
+  @include fh-scale(child, rem);
 
   .is-scalable {
     font-size: 1em;
-    @include scale(self, em);
+    @include fh-scale(self, em);
   }
 }

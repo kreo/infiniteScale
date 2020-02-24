@@ -1,7 +1,7 @@
-%o-content {
+%fh-content {
 
 }
 
-@mixin c-content($options: ()) {
-  @include component(map-get($ui, 'content'), $options);
+@mixin fh-content($options: ()) {
+  @include fh-component(map-get($fh-ui, 'content'), $options);
 }
