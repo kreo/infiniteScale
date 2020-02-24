@@ -1,5 +1,5 @@
 %o-button {
-  @include Align(x, center);
+  @include align(x, center);
   font-size: 1em;
   appearance: none;
   cursor: pointer;

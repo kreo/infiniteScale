@@ -1,4 +1,4 @@
-$Align: (
+$align: (
   axis: (
     start: flex-start,
     center: center,
@@ -7,56 +7,56 @@ $Align: (
 );
 
 @function align-axis($pos) {
-  @return map-get-deep($Align, "axis", $pos);
+  @return map-get-deep($align, "axis", $pos);
 }
 
-%Align-x {
+%align-x {
   display: inline-flex;
   flex-direction: row;
   align-items: center;
 }
 
-%Align-x-start {
+%align-x-start {
   justify-content: align-axis(start);
 }
 
-%Align-x-center {
+%align-x-center {
   justify-content: align-axis(center);
 }
 
-%Align-x-end {
+%align-x-end {
   justify-content: align-axis(end);
 }
 
-%Align-y {
+%align-y {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
 }
 
-%Align-y-start {
+%align-y-start {
   align-items: align-axis(start);
 }
 
-%Align-y-center {
+%align-y-center {
   align-items: align-axis(center);
 }
 
-%Align-y-end {
+%align-y-end {
   align-items: align-axis(end);
 }
 
-@mixin Align($axis: 'x', $position: 'center') {
+@mixin align($axis: 'x', $position: 'center') {
   @if $axis {
     @if $axis == 'x' {
-      @extend %Align-x;
+      @extend %align-x;
     }
     @else if $axis == 'y' {
-      @extend %Align-y;
+      @extend %align-y;
     }
 
     @if $position {
-      @extend %Align-#{$axis}-#{$position};
+      @extend %align-#{$axis}-#{$position};
     }
   }
 }

@@ -1,5 +1,5 @@
 %o-text {
-  @include Align(x, center);
+  @include align(x, center);
   font-size: 1em;
   color: inherit;
 }

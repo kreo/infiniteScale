@@ -1,5 +1,5 @@
 %o-card {
-  @include Align(y, center);
+  @include align(y, center);
   border-radius: 0.33em;
   background-color: white;
   color: $fh-skin-color-default-fg;

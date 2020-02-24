@@ -1,5 +1,5 @@
 %o-media {
-  @include Align(x, center);
+  @include align(x, center);
   width: 1em;
   color: inherit;
 }
