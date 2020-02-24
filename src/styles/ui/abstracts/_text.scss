@@ -4,11 +4,7 @@
   color: inherit;
 }
 
-@mixin o-text() {
-  @extend %o-Text;
-}
-
 @mixin c-text($options: ()) {
-  @include component('text', $options);
+  @include component(map-get($ui, 'text'), $options);
 }
 

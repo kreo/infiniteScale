@@ -40,12 +40,8 @@
   }
 }
 
-@mixin o-button() {
-  @extend %o-button;
-}
-
 @mixin c-button($options: ()) {
-  @include component('button', $options);
+  @include component(map-get($ui, 'button'), $options);
 }
 
 

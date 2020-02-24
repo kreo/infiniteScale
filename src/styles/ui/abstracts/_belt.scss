@@ -6,7 +6,7 @@
 }
 
 @mixin c-belt($options: ()) {
-  @include component('belt', $options) {
+  @include component(map-get($ui, 'belt'), $options) {
     $w-max: map-get($options, width-max);
     @if $w-max {
       max-width: $w-max;

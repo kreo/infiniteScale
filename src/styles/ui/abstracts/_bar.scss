@@ -9,10 +9,6 @@
   }
 }
 
-@mixin o-bar() {
-  @extend %o-bar;
-}
-
 @mixin c-bar($options: ()) {
-  @include component('bar', $options);
+  @include component(map-get($ui, 'bar'), $options);
 }

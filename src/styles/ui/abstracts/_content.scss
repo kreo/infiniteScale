@@ -1,32 +1,7 @@
-%Content {
+%o-content {
 
-}
-
-@mixin o-Content() {
-  @extend %o-Content;
 }
 
 @mixin c-Content($options: ()) {
-  $options: extend(
-    (
-      name: 'content',
-      size: 100%,
-      theme: light,
-      border: true,
-      shadows: true,
-      deep: 2,
-      z: 1,
-      fx-props: all,
-      fx-type: fade,
-      fx-duration: 0.25s,
-      fx-delay: 0
-    ),
-    $options
-  );
-
-  @debug map-get($options, name);
-
-  .#{map-get($options, name)} {
-    @include o-Content();
-  }
+  @include component(map-get($ui, 'content'), $options);
 }

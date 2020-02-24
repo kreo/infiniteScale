@@ -64,6 +64,11 @@
   @return map-merge($obj, $ext-obj);
 }
 
+@function map-set($map, $key, $value) {
+  $new: ($key: $value);
+  @return map-merge($map, $new);
+}
+
 @function convert-px-to-percent($target, $parent: 16) {
   @return percentage($target / $parent);
 }

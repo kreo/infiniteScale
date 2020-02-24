@@ -4,10 +4,6 @@
   color: inherit;
 }
 
-@mixin o-media() {
-  @extend %o-media;
-}
-
 @mixin c-media($options: ()) {
-  @include component('media', $options);
+  @include component(map-get($ui, 'media'), $options);
 }

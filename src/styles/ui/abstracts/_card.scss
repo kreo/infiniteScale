@@ -5,16 +5,12 @@
   color: $fh-skin-color-default-fg;
   box-shadow: $fh-skin-shadows-default-fg;
 
-  .bar,
-  .content {
+  .#{map-get($ui, 'bar')},
+  .#{map-get($ui, 'content')} {
     padding: 1em;
   }
 }
 
-@mixin o-card() {
-  @extend %o-card;
-}
-
 @mixin c-card($options: ()) {
-  @include component('card', $options);
+  @include component(map-get($ui, 'card'), $options);
 }
