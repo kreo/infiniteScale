@@ -60,6 +60,10 @@
   @return $result;
 }
 
+@function extend($obj, $ext-obj) {
+  @return map-merge($obj, $ext-obj);
+}
+
 @function convert-px-to-percent($target, $parent: 16) {
   @return percentage($target / $parent);
 }
@@ -73,5 +77,33 @@
     #{$tag}#{&} {
       #{$prop}: $val;
     }
+  }
+}
+
+@mixin component($name, $options: ()) {
+  $options: extend(
+    (
+      name: $name,
+      width: 100%,
+      width-max: 100%,
+      width-min: null,
+      theme: light,
+      border: true,
+      shadows: true,
+      deep: 2,
+      z: 1,
+      fx-props: all,
+      fx-type: fade,
+      fx-duration: 0.25s,
+      fx-delay: 0
+    ),
+    $options
+  );
+
+  @debug map-get($options, name);
+
+  .#{map-get($options, name)} {
+    @extend %o-#{$name};
+    @content;
   }
 }

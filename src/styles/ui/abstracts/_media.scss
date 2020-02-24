@@ -1,15 +1,13 @@
-%Media {
+%o-media {
   @include Align(x, center);
   width: 1em;
   color: inherit;
 }
 
-@mixin Media() {
-  @extend %Media;
+@mixin o-media() {
+  @extend %o-media;
 }
 
-@if $abstracts-as-output {
-  .media {
-    @include Media();
-  }
+@mixin c-media($options: ()) {
+  @include component('media', $options);
 }

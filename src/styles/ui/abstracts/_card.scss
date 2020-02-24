@@ -1,4 +1,4 @@
-%Card {
+%o-card {
   @include Align(y, center);
   border-radius: 0.33em;
   background-color: white;
@@ -11,12 +11,10 @@
   }
 }
 
-@mixin Card() {
-  @extend %Card;
+@mixin o-card() {
+  @extend %o-card;
 }
 
-@if $abstracts-as-output {
-  .card {
-    @include Card();
-  }
+@mixin c-card($options: ()) {
+  @include component('card', $options);
 }

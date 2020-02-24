@@ -1,17 +1,14 @@
-%Text {
+%o-text {
   @include Align(x, center);
   font-size: 1em;
   color: inherit;
 }
 
-@mixin Text() {
-  @extend %Text;
+@mixin o-text() {
+  @extend %o-Text;
 }
 
-
-@if $abstracts-as-output {
-  .text {
-    @include Text();
-  }
+@mixin c-text($options: ()) {
+  @include component('text', $options);
 }
 

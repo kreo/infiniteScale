@@ -1,4 +1,4 @@
-%Bar {
+%o-bar {
   @include Align(x, start);
   width: 100%;
   height: auto;
@@ -9,12 +9,10 @@
   }
 }
 
-@mixin Bar() {
-  @extend %Bar;
+@mixin o-bar() {
+  @extend %o-bar;
 }
 
-@if $abstracts-as-output {
-  .bar {
-    @include Bar();
-  }
+@mixin c-bar($options: ()) {
+  @include component('bar', $options);
 }

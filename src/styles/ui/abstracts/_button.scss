@@ -1,4 +1,4 @@
-%Button {
+%o-button {
   @include Align(x, center);
   font-size: 1em;
   appearance: none;
@@ -40,13 +40,12 @@
   }
 }
 
-@mixin Button() {
-  @extend %Button;
+@mixin o-button() {
+  @extend %o-button;
+}
+
+@mixin c-button($options: ()) {
+  @include component('button', $options);
 }
 
 
-@if $abstracts-as-output {
-  .button {
-    @include Button();
-  }
-}

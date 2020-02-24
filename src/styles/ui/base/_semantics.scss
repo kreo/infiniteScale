@@ -66,7 +66,7 @@ section {
 
 button,
 input[type=button] {
-  @extend %Button;
+  @extend %o-button;
 }
 
 a,

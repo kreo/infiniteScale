@@ -1,19 +1,15 @@
-%Belt {
+%o-belt {
   display: flex;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
 }
 
-@mixin Belt($max-width: 100%) {
-  @extend %Belt;
-  @if $max-width {
-    max-width: $max-width;
-  }
-}
-
-@if $abstracts-as-output {
-  .belt {
-    @include Belt(1200px);
-  }
+@mixin c-belt($options: ()) {
+  @include component('belt', $options) {
+    $w-max: map-get($options, width-max);
+    @if $w-max {
+      max-width: $w-max;
+    }
+  };
 }
