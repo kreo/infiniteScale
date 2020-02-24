@@ -7,7 +7,7 @@ $Align: (
 );
 
 @function align-axis($pos) {
-  @return map-deep-get($Align, "axis", $pos);
+  @return map-get-deep($Align, "axis", $pos);
 }
 
 %Align-x {

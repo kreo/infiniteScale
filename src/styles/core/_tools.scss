@@ -1,10 +1,10 @@
-/// Map deep get
+/// Deep get function to get a value in nested maps
 /// @author Hugo Giraudel
 /// @access public
 /// @param {Map} $map - Map
 /// @param {Arglist} $keys - Key chain
 /// @return {*} - Desired value
-@function map-deep-get($map, $keys...) {
+@function map-get-deep($map, $keys...) {
     @each $key in $keys {
         $map: map-get($map, $key);
     }
@@ -18,7 +18,7 @@
 /// @param {List} $keys -  Key chaine
 /// @param {*} $value - Value to assign
 /// @return {Map}
-@function map-deep-set($map, $keys, $value) {
+@function map-set-deep($map, $keys, $value) {
   $maps: ($map,);
   $result: null;
 
@@ -60,10 +60,10 @@
   @return $result;
 }
 
-@function pxtopercent($target, $parent: 16) {
+@function convert-px-to-percent($target, $parent: 16) {
   @return percentage($target / $parent);
 }
 
-@function pxtoem($target, $context: 16) {
+@function convert-px-to-em($target, $context: 16) {
   @return ($target / $context) + 0em;
 }

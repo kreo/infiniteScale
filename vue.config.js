@@ -1,23 +1,18 @@
-const path = require("path");
+const magicImporter = require("node-sass-magic-importer")
 
 module.exports = {
   configureWebpack: {
     devtool: 'source-map'
   },
-  pluginOptions: {
-    "style-resources-loader": {
-      preProcessor: "scss",
-      patterns: [
-        path.resolve(__dirname, "./src/styles/main.scss")
-      ]
-    }
-  },
-  css: {
-    requireModuleExtension: false,
-    loaderOptions: {
-      sass: {
-        //prependData: `@import "~@/core/.sass"`
-      },
-    }
+  chainWebpack: config => {
+    const oneOfsMap = config.module.rule('scss').oneOfs.store
+    oneOfsMap.forEach(item => {
+      item
+        .use('sass-loader')
+        .loader('sass-loader', {
+          importer: magicImporter()
+        })
+        .end()
+    })
   }
 }

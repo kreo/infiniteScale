@@ -67,13 +67,7 @@
 </script>
 
 <style lang="scss" scoped>
-  @import "../styles/core/";
-  @import "../styles/abstracts/*";
-</style>
 
-<style lang="stylus" scoped>
-  .pippo
-    content 'ciaone'
 </style>
 
 <style lang="postcss" scoped>
