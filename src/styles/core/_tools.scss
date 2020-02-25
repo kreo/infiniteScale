@@ -37,10 +37,6 @@
   @return $result;
 }
 
-@function fh-extend($obj, $ext-obj) {
-  @return map-merge($obj, $ext-obj);
-}
-
 @function fh-map-set($map, $key, $value) {
   $new: ($key: $value);
   @return map-merge($map, $new);
@@ -63,7 +59,7 @@
 }
 
 @mixin fh-component($name, $options: ()) {
-  $options: fh-extend(
+  $options: map-merge(
     (
       name: $name,
       width: 100%,

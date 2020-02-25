@@ -47,16 +47,6 @@ $fh-align: (
 }
 
 @mixin fh-align($axis: 'x', $position: 'center') {
-  @if $axis {
-    @if $axis == 'x' {
-      @extend %fh-align-x;
-    }
-    @else if $axis == 'y' {
-      @extend %fh-align-y;
-    }
-
-    @if $position {
-      @extend %fh-align-#{$axis}-#{$position};
-    }
-  }
+  @extend %fh-align-#{$axis};
+  @extend %fh-align-#{$axis}-#{$position};
 }
