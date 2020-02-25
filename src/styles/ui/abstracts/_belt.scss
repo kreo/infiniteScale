@@ -6,7 +6,7 @@
 }
 
 @mixin fh-belt($options: ()) {
-  @include fh-component(map-get($fh-ui, 'belt'), $options) {
+  @include fh-component(map-get($fh-system-ui, "belt"), $options) {
     $w-max: map-get($options, width-max);
     @if $w-max {
       max-width: $w-max;

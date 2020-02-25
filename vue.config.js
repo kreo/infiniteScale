@@ -1,4 +1,5 @@
-const magicImporter = require("node-sass-magic-importer")
+// const magicImporter = require("node-sass-magic-importer")
+// const jsonImporter = require("node-sass-json-importer")
 
 module.exports = {
   configureWebpack: {
@@ -10,7 +11,7 @@ module.exports = {
       item
         .use('sass-loader')
         .loader('sass-loader', {
-          importer: magicImporter()
+          //importer: [jsonImporter(), magicImporter()]
         })
         .end()
     })

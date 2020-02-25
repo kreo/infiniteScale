@@ -46,7 +46,7 @@ $fh-align: (
   align-items: fh-align-axis(end);
 }
 
-@mixin fh-align($axis: 'x', $position: 'center') {
+@mixin fh-align($axis: "x", $position: "center") {
   @extend %fh-align-#{$axis};
   @extend %fh-align-#{$axis}-#{$position};
 }

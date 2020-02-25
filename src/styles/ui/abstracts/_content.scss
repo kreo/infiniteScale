@@ -3,5 +3,5 @@
 }
 
 @mixin fh-content($options: ()) {
-  @include fh-component(map-get($fh-ui, 'content'), $options);
+  @include fh-component(map-get($fh-system-ui, 'content'), $options);
 }

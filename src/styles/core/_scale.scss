@@ -1,22 +1,12 @@
-$fh-scale-factor: 0.05 !default;
-$fh-scale-levels: 64 !default;
-$fh-scale-steps: (
-  xxs: 0.67,
-  xs: 0.83,
-  sm: 1.0,
-  md: 1.17,
-  lg: 1.5,
-  xl: 2.0,
-  xxl: 2.67
-) !default;
+
 
 @mixin scale-handler($params) {
 
   $options: map-merge((
-    ctx: '',
+    ctx: "",
     size: 1,
     unit: rem,
-    step: 'md'
+    step: "md"
   ), $params);
 
   $ctx:  map-get($options, ctx);
@@ -40,13 +30,15 @@ $fh-scale-steps: (
 }
 
 @mixin fh-scale-steps($ctx, $unit) {
-  @each $step in $fh-scale-steps {
-    $idx: index($fh-scale-steps, $step);
-    $key: nth(map-keys($fh-scale-steps), $idx);
+  $scale-steps: map-get($fh-system-scale, steps);
+
+  @each $step in $scale-steps {
+    $idx: index($scale-steps, $step);
+    $key: nth(map-keys($scale-steps), $idx);
     $options: (
       ctx: $ctx,
       unit: $unit,
-      size: map-get($fh-scale-steps, $key),
+      size: map-get($scale-steps, $key),
       step: $key
     );
 
@@ -55,11 +47,14 @@ $fh-scale-steps: (
 }
 
 @mixin fh-scale-levels($ctx, $unit) {
-  @for $idx from 1 through $fh-scale-levels {
+  $scale-factor: map-get($fh-system-scale, factor);
+  $scale-levels: map-get($fh-system-scale, levels);
+
+  @for $idx from 1 through $scale-levels {
     $options: (
       ctx: $ctx,
       unit: $unit,
-      size: $fh-scale-factor * $idx,
+      size: $scale-factor * $idx,
       step: $idx
     );
     @include scale-handler($options);
@@ -67,7 +62,7 @@ $fh-scale-steps: (
 }
 
 @mixin fh-scale($target: self, $unit: em) {
-  $ctx: if($target == self, '&', '');
+  $ctx: if($target == self, "&", "");
   @include fh-scale-levels($ctx, $unit);
   @include fh-scale-steps($ctx, $unit);
 }
