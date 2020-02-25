@@ -75,7 +75,7 @@
 // `$keys` String(s)
 //
 // Example of use:
-// fh-deep-map-get($nested-map, 'xs', 'y')
+// fh-deep-map-get($nested-map, 'a', 'b')
 //
 // @return Unspecified (it may return anything as a result)
 // ---------------------------------------------------------
@@ -100,7 +100,7 @@
 // `$maps` Map(s)
 //
 // Example of use:
-// fh-deep-map-merge($nested-map, '$map-A', '$map-B')
+// fh-deep-map-merge($nested-map, '$a', '$b')
 //
 // @return Map
 // ---------------------------------------------------------
