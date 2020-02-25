@@ -1,0 +1,186 @@
+@function fh-map-get-deep($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+@function fh-map-set-deep($map, $keys, $value) {
+  $maps: ($map,);
+  $result: null;
+
+  @if type-of(nth($keys, -1)) == "map" {
+    @warn "The last key you specified is a map; it will be overrided with `#{$value}`.";
+  }
+
+  @if length($keys) == 1 {
+    @return map-merge($map, ($keys: $value));
+  }
+
+  @for $i from 1 through length($keys) - 1 {
+    $current-key: nth($keys, $i);
+    $current-map: nth($maps, -1);
+    $current-get: map-get($current-map, $current-key);
+    @if $current-get == null {
+      @error "Key `#{$key}` doesn't exist at current level in map.";
+    }
+    $maps: append($maps, $current-get);
+  }
+
+  @for $i from length($maps) through 1 {
+    $current-map: nth($maps, $i);
+    $current-key: nth($keys, $i);
+    $current-val: if($i == length($maps), $value, $result);
+    $result: map-merge($current-map, ($current-key: $current-val));
+  }
+
+  @return $result;
+}
+
+// ---------------------------------------------------------
+// fh-deep-map-check
+// Check if nested map has a value by the keys
+//
+// Required arguments:
+// `$map` Map
+// `$keys` String(s)
+//
+// Example of use:
+// fh-deep-map-check($nested-map, 'key-1', 'key-2')
+//
+// @return Bool
+// ---------------------------------------------------------
+@function fh-deep-map-check ($map, $keys...) {
+  @if type-of($map) != 'map' {
+    @error 'The argument $map: `#{$map}` is of incorrect type: `#{type-of($map)}`. Type of `Map` is required!';
+  }
+
+  @each $key in $keys {
+    @if not map-has-key($map, $key) {
+      @return false;
+    }
+
+    $map: map-get($map, $key);
+  }
+
+  @return true;
+}
+
+// ---------------------------------------------------------
+// fh-deep-map-get
+// Get a value from nested map by the keys
+//
+// Required arguments:
+// `$map` Map
+// `$keys` String(s)
+//
+// Example of use:
+// fh-deep-map-get($nested-map, 'xs', 'y')
+//
+// @return Unspecified (it may return anything as a result)
+// ---------------------------------------------------------
+@function fh-deep-map-get ($map, $keys...) {
+  @if type-of($map) != 'map' {
+    @error 'The argument $map: `#{$map}` is of incorrect type: `#{type-of($map)}`. Type of `Map` is required!';
+  }
+
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+
+  @return $map;
+}
+
+// ---------------------------------------------------------
+// fh-deep-map-merge
+// Get a value from nested map by the keys
+//
+// Required arguments:
+// `$map` Map
+// `$maps` Map(s)
+//
+// Example of use:
+// fh-deep-map-merge($nested-map, '$map-A', '$map-B')
+//
+// @return Map
+// ---------------------------------------------------------
+@function fh-deep-map-merge ($map, $maps...) {
+  $last: nth($maps, -1);
+  $deep: $last == true;
+  $max: if($deep, length($maps) - 1, length($maps));
+
+  // Loop through all maps in $maps...
+  @for $i from 1 through $max {
+    // Store current map
+    $current: nth($maps, $i);
+
+    // If not in deep mode, simply merge current map with map
+    @if not $deep {
+      $map: map-merge($map, $current);
+    }
+    @else {
+      // If in deep mode, loop through all tuples in current map
+      @each $key, $value in $current {
+
+        // If value is a nested map and same key from map is a nested map as well
+        @if type-of($value) == 'map' and type-of(map-get($map, $key)) == 'map' {
+          // Recursive extend
+          $value: fh-deep-map-merge(map-get($map, $key), $value, true);
+        }
+
+        // Merge current tuple with map
+        $map: map-merge($map, ($key: $value));
+      }
+    }
+  }
+
+  @return $map;
+}
+
+// ---------------------------------------------------------
+// fh-get
+// Search for any value contained within nested maps, by using
+// dot notation as the key argument
+//
+// Required arguments:
+// `$key` String
+//
+// Example of use:
+// fh-get('border.radius.xs')
+//
+// Dependencies:
+// fh-deep-map-check, fh-deep-map-get, fh-str-explode
+//
+// @return Anything
+// ---------------------------------------------------------
+@function fh-get($key, $map: $fh-system) {
+  $keys: fh-str-explode($key, '.');
+
+  @if not fh-deep-map-check($map, $keys...) {
+    @error 'The argument $map: `#{$map}` doesn\'t has some of the $keys: `#{$keys}`!';
+  }
+
+  @return fh-deep-map-get($map, $keys...);
+}
+
+@function fh-map-set($map, $key, $value) {
+  $new: ($key: $value);
+  @return map-merge($map, $new);
+}
+
+@function fh-map-collect($maps...) {
+  $collection: ();
+
+  @each $map in $maps {
+    $collection: map-merge($collection, $map);
+  }
+  @return $collection;
+}
+
+@mixin fh-map-debug($map) {
+  @if map-get($fh-env, 'is-debug') {
+    @each $k, $v in $map {
+      @debug "$fh-env[#{$k}]: #{$v}";
+    }
+  }
+}

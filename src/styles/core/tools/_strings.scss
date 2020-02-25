@@ -1,0 +1,116 @@
+@function fh-convert-px-to-percent($target, $parent: 16) {
+  @return percentage($target / $parent);
+}
+
+@function fh-convert-px-to-em($target, $context: 16) {
+  @return ($target / $context) + 0em;
+}
+
+// ---------------------------------------------------------
+// str-capitalize
+// Make string's first character uppercase
+//
+// Required arguments:
+// `$string` String
+//
+// Example of use:
+// str-capitalize('differs')
+//
+// @return String
+// ---------------------------------------------------------
+@function fh-str-capitalize ($string) {
+  @if type-of($string) != 'string' {
+    @error 'The argument $string: `#{$string}` is of incorrect type: `#{type-of($string)}`. Type of `String` is required!';
+  }
+
+  @return to-upper-case(str-slice($string, 1, 1)) + str-slice($string, 2);
+}
+
+// ---------------------------------------------------------
+// str-explode
+// Split a string by delimiter
+//
+// Required arguments:
+// `$string` String
+// `$delimiter` String *predefined*
+//
+// Example of use:
+// str-explode('some-things-will-never-change', '-')
+//
+// @return List
+// ---------------------------------------------------------
+@function fh-str-explode ($string, $delimiter: '') {
+  @if type-of($string) != 'string' {
+    @error 'The argument $string: `#{$string}` is of incorrect type: `#{type-of($string)}`. Type of `String` is required!';
+  }
+  @else if type-of($delimiter) != 'string' {
+    @error 'The argument $string: `#{$string}` is of incorrect type: `#{type-of($string)}`. Type of `String` is required!';
+  }
+
+  $result: ();
+  $running: true;
+
+  @if str-length($delimiter) == 0 {
+    @for $i from 1 through str-length($string) {
+      $result: append($result, str-slice($string, $i, $i));
+    }
+
+    @return $result;
+  }
+
+  @while $running {
+    $index: str-index($string, $delimiter);
+
+    @if $index != null {
+      $item: str-slice($string, 1, ($index - 1));
+      $result: append($result, $item);
+      $string: str-slice($string, ($index + str-length($delimiter)));
+    }
+    @else {
+      $running: false;
+    }
+  }
+
+  @return append($result, $string);
+}
+
+// ---------------------------------------------------------
+// str-replace
+// Replace occurence of a string
+//
+// Required arguments:
+// `$string` String
+// `$search` String
+// `$replace` String *predefined*
+//
+// Example of use:
+// str-replace('This is just an example', 'just', 'not')
+//
+// @return String
+// ---------------------------------------------------------
+@function fh-str-replace ($string, $search, $replace: '') {
+  @if type-of($string) != 'string' {
+    @error 'The argument $string: `#{$string}` is of incorrect type: `#{type-of($string)}`. Type of `String` is required!';
+  }
+  @else if type-of($search) != 'string' {
+    @error 'The argument $search: `#{$search}` is of incorrect type: `#{type-of($search)}`. Type of `String` is required!';
+  }
+  @else if type-of($replace) != 'string' {
+    @error 'The argument $search: `#{$search}` is of incorrect type: `#{type-of($search)}`. Type of `String` is required!';
+  }
+
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      fh-str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search, $replace
+      );
+  }
+
+  @return $string;
+}
+
+
+

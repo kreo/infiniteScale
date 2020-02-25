@@ -1,7 +1,7 @@
 %fh-content {
-
+  content: '';
 }
 
 @mixin fh-content($options: ()) {
-  @include fh-component(map-get($fh-system-ui, 'content'), $options);
+  @include fh-component(fh-deep-map-get($fh-ui, 'content'), $options);
 }

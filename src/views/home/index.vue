@@ -155,8 +155,8 @@
     </svg>
 
     <div class="content">
-      <section scale="xxs">
-        <pre scale-root="md" fh-highlight fh-text="center">[XXS]</pre>
+      <section scale="2xs">
+        <pre scale-root="md" fh-highlight fh-text="center">[2XS]</pre>
         <h6>Infinte Scale</h6>
         <h5>Infinte Scale</h5>
         <h4>Infinte Scale</h4>
@@ -251,8 +251,8 @@
         </p>
       </section>
 
-      <section scale="xxl">
-        <pre scale-root="md" fh-highlight fh-text="center">[XXL]</pre>
+      <section scale="2xl">
+        <pre scale-root="md" fh-highlight fh-text="center">[2XL]</pre>
         <h6>Infinte Scale</h6>
         <h5>Infinte Scale</h5>
         <h4>Infinte Scale</h4>
@@ -267,8 +267,8 @@
         </p>
       </section>
 
-      <section scale="xxxl">
-        <pre scale-root="md" fh-highlight fh-text="center">[XXXL]</pre>
+      <section scale="3xl">
+        <pre scale-root="md" fh-highlight fh-text="center">[3XL]</pre>
         <h6>Infinte Scale</h6>
         <h5>Infinte Scale</h5>
         <h4>Infinte Scale</h4>
@@ -287,7 +287,7 @@
     <div class="content">
 
       <section>
-        <div class="buttonCmp" scale="xxs">
+        <div class="buttonCmp" scale="2xs">
           <button class="button">
             <span class="text">Button</span>
           </button>
@@ -390,7 +390,7 @@
       </section>
 
       <section>
-        <div class="buttonCmp" scale="xxl">
+        <div class="buttonCmp" scale="2xl">
           <button class="button">
             <span class="text">Button</span>
           </button>
@@ -401,7 +401,7 @@
 
       <section class="cardCmp">
         <div class="buttonCmp">
-          <button scale="xxs">
+          <button scale="2xs">
             <span class="text">Button</span>
           </button>
         </div>
@@ -455,7 +455,7 @@
       <br>
 
       <div class="buttonCmp">
-        <button scale="xxl">
+        <button scale="2xl">
           <span class="text">Button</span>
         </button>
       </div>

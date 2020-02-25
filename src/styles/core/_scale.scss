@@ -30,7 +30,7 @@
 }
 
 @mixin fh-scale-steps($ctx, $unit) {
-  $scale-steps: map-get($fh-system-scale, steps);
+  $scale-steps: map-get($fh-scale, scale-steps);
 
   @each $step in $scale-steps {
     $idx: index($scale-steps, $step);
@@ -47,8 +47,8 @@
 }
 
 @mixin fh-scale-levels($ctx, $unit) {
-  $scale-factor: map-get($fh-system-scale, factor);
-  $scale-levels: map-get($fh-system-scale, levels);
+  $scale-factor: map-get($fh-scale, scale-factor);
+  $scale-levels: map-get($fh-scale, scale-levels);
 
   @for $idx from 1 through $scale-levels {
     $options: (

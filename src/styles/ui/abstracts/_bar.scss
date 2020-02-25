@@ -10,5 +10,5 @@
 }
 
 @mixin fh-bar($options: ()) {
-  @include fh-component(map-get($fh-system-ui, 'bar'), $options);
+  @include fh-component(fh-deep-map-get($fh-ui, 'bar'), $options);
 }
