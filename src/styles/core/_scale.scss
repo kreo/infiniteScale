@@ -1,13 +1,13 @@
 $fh-scale-factor: 0.05 !default;
 $fh-scale-levels: 64 !default;
 $fh-scale-steps: (
-  xxs: 0.5,
-  xs: 0.75,
+  xxs: 0.67,
+  xs: 0.83,
   sm: 1.0,
-  md: 1.25,
+  md: 1.17,
   lg: 1.5,
-  xl: 1.75,
-  xxl: 2.0
+  xl: 2.0,
+  xxl: 2.67
 ) !default;
 
 @mixin scale-handler($params) {
