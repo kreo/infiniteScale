@@ -1,0 +1,13 @@
+$fh-ui: (
+  ui-bar: "bar",
+  ui-button: "button",
+  ui-content: "content",
+  ui-card: "card",
+  ui-media: "media",
+  ui-belt: "belt",
+  ui-text: "text"
+);
+
+@function fh-ui($el) {
+  @return fh-deep-map-get($fh-ui, $el);
+}

@@ -7,29 +7,40 @@
 }
 
 @mixin fh-component($name, $options: ()) {
-  $options: map-merge(
-    (
-      name: $name,
-      width: 100%,
-      width-max: 100%,
-      width-min: null,
-      theme: light,
-      border: true,
-      shadows: true,
-      elevation: 2,
-      level: 1,
-      fx-props: all,
-      fx-type: fade,
-      fx-duration: 0.25s,
-      fx-delay: 0
-    ),
-    $options
-  );
 
-  @warn "Created Dynamic Sass Component: #{map-get($options, name)}";
+  @if not $name {
+    @error "component $name is missing!";
+  }
+  @else {
 
-  .#{map-get($options, name)} {
-    @extend %fh-#{$name};
-    @content;
+    @if fh-deep-map-check($fh-ui, $name) {
+      $name: fh-get($name);
+    }
+
+    $options: map-merge(
+      (
+        name: $name,
+        width: 100%,
+        width-max: 100%,
+        width-min: null,
+        theme: light,
+        border: true,
+        shadows: true,
+        elevation: 2,
+        level: 1,
+        fx-props: all,
+        fx-type: fade,
+        fx-duration: 0.25s,
+        fx-delay: 0
+      ),
+      $options
+    );
+
+    @warn "Created Dynamic Sass Component: #{map-get($options, name)}";
+
+    .#{map-get($options, name)} {
+      @extend %fh-#{$name};
+      @content;
+    }
   }
 }

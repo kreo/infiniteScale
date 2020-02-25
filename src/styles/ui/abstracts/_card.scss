@@ -5,12 +5,12 @@
   color: $fh-skin-color-default-fg;
   box-shadow: $fh-skin-shadows-default-fg;
 
-  .#{fh-deep-map-get($fh-ui, "bar")},
-  .#{fh-deep-map-get($fh-ui, "content")} {
+  .#{fh-get(ui-bar)},
+  .#{fh-get(ui-content)} {
     padding: 1em;
   }
 }
 
 @mixin fh-card($options: ()) {
-  @include fh-component(fh-deep-map-get($fh-ui, "card"), $options);
+  @include fh-component(ui-card, $options);
 }

@@ -41,7 +41,7 @@
 }
 
 @mixin fh-button($options: ()) {
-  @include fh-component(fh-deep-map-get($fh-ui, 'button'), $options);
+  @include fh-component(ui-button, $options);
 }
 
 

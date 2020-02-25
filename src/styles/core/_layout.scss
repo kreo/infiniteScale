@@ -1,0 +1,12 @@
+$fh-layout : (
+//  'layout-is-boxed'        :  theme-layout-is-boxed
+//  'layout-width-min'       :  theme-layout-width-min
+//  'layout-width-max-tight' :  theme-layout-width-max-tight
+//  'layout-width-max'       :  theme-layout-width-max
+//  'layout-gutter-row'      :  theme-layout-gutter-row
+//  'layout-gutter-col'      :  theme-layout-gutter-col
+);
+
+@function fh-layout($el) {
+  @return fh-deep-map-get($fh-layout, $el);
+}

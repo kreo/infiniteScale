@@ -1,1 +1,26 @@
+$fh-query: (
+  query-is-adaptive : true,
+  query-breakpoint-unit : "px",
+  query-breakpoint-3xs : "320",
+  query-breakpoint-2xs : "481",
+  query-breakpoint-xs : "641",
+  query-breakpoint-sm : "769",
+  query-breakpoint-md : "961",
+  query-breakpoint-lg : "1025",
+  query-breakpoint-xl : "1281",
+  query-breakpoint-2xl : "1601",
+  query-breakpoint-3xl : "1920",
+  query-density-unit : "dpi",
+  query-density-1x : "96",
+  query-density-15x : "144",
+  query-density-2x : "192",
+  query-density-3x : "288",
+  query-density-4x : "384",
+  query-threshold-desktop : "2560px",
+  query-threshold-tablet : "1366px",
+  query-threshold-phone : "812px"
+);
 
+@function fh-query($el) {
+  @return fh-deep-map-get($fh-query, $el);
+}

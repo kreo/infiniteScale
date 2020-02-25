@@ -1,0 +1,17 @@
+$fh-level: (
+  level-master : 10000000000,
+  level-above : 9000000000,
+  level-outer : 800000000,
+  level-over : 70000000,
+  level-menu : 6000000,
+  level-header : 500000,
+  level-nav : 40000,
+  level-content : 3000,
+  level-container : 200,
+  level-base : 10,
+  level-below : 0
+);
+
+@function fh-level($el) {
+  @return fh-deep-map-get($fh-level, $el);
+}

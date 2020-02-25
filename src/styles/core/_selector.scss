@@ -1,0 +1,12 @@
+$fh-selector: (
+  selector-semantic : "article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section",
+  selector-touch : "html",
+  selector-headings : "h1, h2, h3, h4, h5, h6",
+  selector-paragraphs : "p",
+  selector-buttons : "button, input[type=submit], [class*=button], [class*=btn], [button]",
+  selector-links : "a, [class*=link], [class*=anchor]"
+);
+
+@function fh-selector($el) {
+  @return fh-deep-map-get($fh-selector, $el);
+}
